@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Archive · 全集 — MORNM</title>
+<meta name="description" content="Complete archive of 47 posters and visual works by Murtadha M. Majid — MORNM · 紋." />
+<meta name="author" content="Murtadha Muayad Majid" />
+<meta name="theme-color" content="#0A0A0A" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Archive · 全集 — MORNM" />
+<meta property="og:description" content="Complete index of posters and visual experiments · 47 frames · MORNM · 紋" />
+<meta property="og:image" content="assets/og-cover.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Archive · 全集 — MORNM" />
+<meta name="twitter:description" content="47 frames · posters and visual experiments" />
+<meta name="twitter:image" content="assets/og-cover.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syncopate:wght@400;700&family=Outfit:wght@200;300;400;500;600;700&family=Shippori+Mincho:wght@400;500;700&family=JetBrains+Mono:wght@300;400;500&family=Tajawal:wght@400;500;700;800;900&family=Reem+Kufi:wght@400;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-archive">
+
+<!-- Ambient backgrounds -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-scanlines" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--a" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--b" aria-hidden="true"></div>
+
+<div class="kanji-column" aria-hidden="true">
+  <span>全</span><span>集</span><span>記</span><span>憶</span><span>断</span><span>片</span>
+</div>
+
+<!-- Boot -->
+<div class="boot" id="boot">
+  <div class="boot__frame">
+    <div class="boot__crosshair boot__crosshair--tl"></div>
+    <div class="boot__crosshair boot__crosshair--tr"></div>
+    <div class="boot__crosshair boot__crosshair--bl"></div>
+    <div class="boot__crosshair boot__crosshair--br"></div>
+    <div class="boot__label" data-i18n-en="SYS / ARCHIVE" data-i18n-ar="نظام / أرشيف">SYS / ARCHIVE</div>
+    <div class="boot__title">A R C H I V E</div>
+    <div class="boot__sub" data-i18n-en="全集 — Loading frames" data-i18n-ar="全集 — جاري تحميل الإطارات">全集 — Loading frames</div>
+    <div class="boot__bar"><div class="boot__bar-fill" id="bootBar"></div></div>
+    <div class="boot__status" id="bootStatus">00%</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="index.html" class="nav__brand" data-sfx="click">
+    <span class="nav__brand-mark">▲</span>
+    <span class="nav__brand-text">MORNM</span>
+    <span class="nav__brand-jp">紋</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="index.html#about"    data-sfx="hover"><i>01</i> <span data-i18n-en="About"   data-i18n-ar="عني">About</span>   <em>自己</em></a>
+    <a href="index.html#skills"   data-sfx="hover"><i>02</i> <span data-i18n-en="Skills"  data-i18n-ar="المهارات">Skills</span>  <em>技能</em></a>
+    <a href="index.html#projects" data-sfx="hover" class="is-active"><i>03</i> <span data-i18n-en="Work"    data-i18n-ar="الأعمال">Work</span>    <em>作品</em></a>
+    <a href="index.html#timeline" data-sfx="hover"><i>04</i> <span data-i18n-en="Path"    data-i18n-ar="المسار">Path</span>    <em>道</em></a>
+    <a href="index.html#contact"  data-sfx="hover"><i>05</i> <span data-i18n-en="Contact" data-i18n-ar="تواصل">Contact</span> <em>連絡</em></a>
+  </nav>
+  <div class="nav__right">
+    <button class="nav__lang" id="langToggle" data-sfx="click" aria-label="Toggle language">
+      <svg class="nav__lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/>
+      </svg>
+      <span class="nav__lang-text" id="langText">عربي</span>
+    </button>
+    <button class="nav__sound" id="soundToggle" data-sfx="click" aria-label="Toggle sound">
+      <span class="nav__sound-dot"></span>
+      <span class="nav__sound-text">SFX · ON</span>
+    </button>
+  </div>
+  <button class="nav__burger" id="burger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Archive hero strip -->
+<section class="archive-hero" id="hero">
+  <div class="archive-hero__inner">
+    <a href="index.html" class="archive-hero__back" data-sfx="hover">
+      <span>←</span>
+      <span data-i18n-en="Back to Portfolio" data-i18n-ar="عودة للمعرض">Back to Portfolio</span>
+    </a>
+
+    <div class="archive-hero__top">
+      <span class="archive-hero__no">— 03 / ARCHIVE</span>
+      <span class="archive-hero__stamp">REC ●  記録</span>
+    </div>
+
+    <h1 class="archive-hero__title">
+      <span data-i18n-en="Archive" data-i18n-ar="الأرشيف">Archive</span> <em>全集</em>
+    </h1>
+
+    <p class="archive-hero__lead"
+       data-i18n-en="Every frame, every poster, every late-night sketch — sequenced and indexed. Click any tile to view full size."
+       data-i18n-ar="كل إطار، كل بوستر، كل سكتش سهر — مرتّب ومُفهرس. اضغط على أي بطاقة لعرضها كاملة.">
+      Every frame, every poster, every late-night sketch — sequenced and indexed.
+      Click any tile to view full size.
+    </p>
+
+    <div class="archive-hero__meta">
+      <div>
+        <span data-i18n-en="FRAMES" data-i18n-ar="إطارات">FRAMES</span>
+        <strong>47</strong>
+      </div>
+      <div>
+        <span data-i18n-en="RANGE" data-i18n-ar="الفترة">RANGE</span>
+        <strong>2022 — 2026</strong>
+      </div>
+      <div>
+        <span data-i18n-en="STUDIO" data-i18n-ar="استوديو">STUDIO</span>
+        <strong>MORNM · 紋</strong>
+      </div>
+      <div>
+        <span data-i18n-en="FORMAT" data-i18n-ar="الصيغة">FORMAT</span>
+        <strong>JPG · PNG · GIF</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Grid -->
+<section class="archive">
+  <div class="archive-grid" id="gallery">
+    <!-- populated by inline JS below -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__row">
+    <div class="footer__brand">
+      <span class="footer__mark">▲</span>
+      <span>MORNM · ARCHIVE</span>
+      <em>記憶の断片</em>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 <span data-i18n-en="Murtadha Muayad Majid" data-i18n-ar="مرتضى مؤيد مجيد">Murtadha Muayad Majid</span></span>
+      <span class="dotsep">·</span>
+      <span data-i18n-en="Sorted by sequence, lit by orange."
+            data-i18n-ar="مرتّب بالتسلسل، مضيء بالبرتقالي.">Sorted by sequence, lit by orange.</span>
+    </div>
+    <div class="footer__top">
+      <a href="index.html" data-sfx="click">
+        <span data-i18n-en="Back to Portfolio" data-i18n-ar="عودة للمعرض">Back to Portfolio</span> <span>↗</span>
+      </a>
+    </div>
+  </div>
+  <div class="footer__strip" aria-hidden="true">
+    <span>全集 · ARCHIVE · 記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · 全集 · ARCHIVE ·</span>
+    <span>全集 · ARCHIVE · 記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · 全集 · ARCHIVE ·</span>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous">‹</button>
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next">›</button>
+  <figure class="lightbox__inner">
+    <img id="lightboxImg" src="" alt="" />
+    <figcaption id="lightboxCap"></figcaption>
+  </figure>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"></div>
+</div>
+
+<!-- Populate archive grid BEFORE script.js so cursor + event bindings catch all tiles -->
+<script>
+(function () {
+  // Each poster: filename + tag (poster / series / motion)
+  const POSTERS = [
+    { f: 'p01.jpg', t: 'poster' },
+    { f: 'p02.jpg', t: 'poster' },
+    { f: 'p03.png', t: 'poster' },
+    { f: 'p04.png', t: 'poster' },
+    { f: 'p05.jpg', t: 'series' },
+    { f: 'p06.jpg', t: 'series' },
+    { f: 'p07.jpg', t: 'series' },
+    { f: 'p08.jpg', t: 'series' },
+    { f: 'p09.jpg', t: 'series' },
+    { f: 'p10.png', t: 'poster' },
+    { f: 'p11.jpg', t: 'poster' },
+    { f: 'p12.jpg', t: 'poster' },
+    { f: 'p13.jpg', t: 'poster' },
+    { f: 'p14.jpg', t: 'poster' },
+    { f: 'p15.png', t: 'poster' },
+    { f: 'p16.png', t: 'poster' },
+    { f: 'p18.gif', t: 'motion' },
+    { f: 'p19.jpg', t: 'series' },
+    { f: 'p20.jpg', t: 'series' },
+    { f: 'p21.jpg', t: 'series' },
+    { f: 'p22.jpg', t: 'series' },
+    { f: 'p23.jpg', t: 'series' },
+    { f: 'p24.jpg', t: 'series' },
+    { f: 'p25.jpg', t: 'series' },
+    { f: 'p26.jpg', t: 'series' },
+    { f: 'p27.jpg', t: 'series' },
+    { f: 'p28.jpg', t: 'series' },
+    { f: 'p29.png', t: 'poster' },
+    { f: 'p30.png', t: 'poster' },
+    { f: 'p31.jpg', t: 'poster' },
+    { f: 'p32.jpg', t: 'poster' },
+    { f: 'p33.jpg', t: 'poster' },
+    { f: 'p34.jpg', t: 'series' },
+    { f: 'p35.jpg', t: 'series' },
+    { f: 'p36.jpg', t: 'series' },
+    { f: 'p37.jpg', t: 'series' },
+    { f: 'p38.jpg', t: 'series' },
+    { f: 'p39.jpg', t: 'poster' },
+    { f: 'p40.png', t: 'poster' },
+    { f: 'p41.png', t: 'poster' },
+    { f: 'p42.png', t: 'poster' },
+    { f: 'p43.jpg', t: 'poster' },
+    { f: 'p44.jpg', t: 'poster' },
+    { f: 'p45.jpg', t: 'poster' },
+    { f: 'p46.jpg', t: 'poster' },
+    { f: 'p47.jpg', t: 'poster' },
+    { f: 'p48.jpg', t: 'poster' }
+  ];
+
+  const gallery = document.getElementById('gallery');
+  const total = String(POSTERS.length).padStart(3, '0');
+
+  POSTERS.forEach((p, i) => {
+    const idx = String(i + 1).padStart(3, '0');
+    const ext = p.f.split('.').pop().toUpperCase();
+    const tile = document.createElement('figure');
+    tile.className = 'tile card';
+    tile.setAttribute('data-sfx-target', '');
+    tile.style.setProperty('--idx', i);
+    tile.innerHTML = `
+      <img src="assets/posts/${p.f}" loading="lazy" alt="Poster ${idx}" />
+      <div class="tile__overlay" aria-hidden="true">
+        <span class="tile__zoom" data-i18n-en="VIEW" data-i18n-ar="عرض">VIEW</span>
+      </div>
+      <div class="tile__strip">
+        <span class="tile__no">${idx} / ${total}</span>
+        <span class="tile__type">${ext}</span>
+      </div>
+      <figcaption class="card__cap" hidden><span class="card__id">PRJ // ${idx}</span></figcaption>
+    `;
+    gallery.appendChild(tile);
+  });
+})();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

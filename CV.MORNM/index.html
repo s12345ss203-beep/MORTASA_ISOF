@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MEMORIA — Murtadha M. Majid · Multimedia Designer</title>
+<meta name="description" content="Cinematic portfolio of Murtadha Muayad Majid — multimedia designer, video editor, and visual storyteller. MORNM · 紋. Baghdad-based." />
+<meta name="author" content="Murtadha Muayad Majid" />
+<meta name="theme-color" content="#0A0A0A" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="MEMORIA — Murtadha M. Majid · Multimedia Designer" />
+<meta property="og:description" content="Cinematic portfolio · Posters, video edits, and visual experiments. MORNM · 紋" />
+<meta property="og:image" content="assets/og-cover.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ar_IQ" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MEMORIA — Murtadha M. Majid" />
+<meta name="twitter:description" content="Cinematic portfolio · MORNM · 紋" />
+<meta name="twitter:image" content="assets/og-cover.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syncopate:wght@400;700&family=Outfit:wght@200;300;400;500;600;700&family=Shippori+Mincho:wght@400;500;700&family=JetBrains+Mono:wght@300;400;500&family=Tajawal:wght@400;500;700;800;900&family=Reem+Kufi:wght@400;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ::: AMBIENT BACKGROUND ::: -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-scanlines" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--a" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--b" aria-hidden="true"></div>
+
+<!-- Ambient kanji column -->
+<div class="kanji-column" aria-hidden="true">
+  <span>記</span><span>憶</span><span>の</span><span>断</span><span>片</span><span>夢</span><span>幻</span><span>影</span>
+</div>
+
+<!-- Loading boot screen -->
+<div class="boot" id="boot">
+  <div class="boot__frame">
+    <div class="boot__crosshair boot__crosshair--tl"></div>
+    <div class="boot__crosshair boot__crosshair--tr"></div>
+    <div class="boot__crosshair boot__crosshair--bl"></div>
+    <div class="boot__crosshair boot__crosshair--br"></div>
+    <div class="boot__label" data-i18n-en="SYS / INIT" data-i18n-ar="تشغيل / النظام">SYS / INIT</div>
+    <div class="boot__title">M E M O R I A</div>
+    <div class="boot__sub" data-i18n-en="記憶 — Loading visual cortex" data-i18n-ar="記憶 — جارٍ تحميل الذاكرة البصرية">記憶 — Loading visual cortex</div>
+    <div class="boot__bar"><div class="boot__bar-fill" id="bootBar"></div></div>
+    <div class="boot__status" id="bootStatus">00%</div>
+  </div>
+</div>
+
+<!-- ::: NAV ::: -->
+<header class="nav" id="nav">
+  <a href="#hero" class="nav__brand" data-sfx="click">
+    <span class="nav__brand-mark">▲</span>
+    <span class="nav__brand-text">MORNM</span>
+    <span class="nav__brand-jp">紋</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#about"    data-sfx="hover"><i>01</i> <span data-i18n-en="About"   data-i18n-ar="عني">About</span>   <em>自己</em></a>
+    <a href="#skills"   data-sfx="hover"><i>02</i> <span data-i18n-en="Skills"  data-i18n-ar="المهارات">Skills</span>  <em>技能</em></a>
+    <a href="#projects" data-sfx="hover"><i>03</i> <span data-i18n-en="Work"    data-i18n-ar="الأعمال">Work</span>    <em>作品</em></a>
+    <a href="#timeline" data-sfx="hover"><i>04</i> <span data-i18n-en="Path"    data-i18n-ar="المسار">Path</span>    <em>道</em></a>
+    <a href="#contact"  data-sfx="hover"><i>05</i> <span data-i18n-en="Contact" data-i18n-ar="تواصل">Contact</span> <em>連絡</em></a>
+  </nav>
+  <div class="nav__right">
+    <button class="nav__lang" id="langToggle" data-sfx="click" aria-label="Toggle language">
+      <svg class="nav__lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M3 12h18"/>
+        <path d="M12 3a14 14 0 0 1 0 18"/>
+        <path d="M12 3a14 14 0 0 0 0 18"/>
+      </svg>
+      <span class="nav__lang-text" id="langText">عربي</span>
+    </button>
+    <button class="nav__sound" id="soundToggle" data-sfx="click" aria-label="Toggle sound">
+      <span class="nav__sound-dot"></span>
+      <span class="nav__sound-text">SFX · ON</span>
+    </button>
+  </div>
+  <button class="nav__burger" id="burger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ::: HERO ::: -->
+<section class="hero" id="hero">
+  <!-- HUD frame -->
+  <div class="hud" aria-hidden="true">
+    <span class="hud__tag hud__tag--tl">REC ● 01 / 05</span>
+    <span class="hud__tag hud__tag--tr">SECTOR · BAGHDAD-09</span>
+    <span class="hud__tag hud__tag--bl">CHANNEL .ƒ — MORNM</span>
+    <span class="hud__tag hud__tag--br" id="hudClock">--:--:--</span>
+    <span class="hud__cross hud__cross--tl"></span>
+    <span class="hud__cross hud__cross--tr"></span>
+    <span class="hud__cross hud__cross--bl"></span>
+    <span class="hud__cross hud__cross--br"></span>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__left">
+      <div class="hero__meta reveal">
+        <span class="dot"></span>
+        <span data-i18n-en="Portfolio · Volume 02" data-i18n-ar="معرض الأعمال · المجلّد الثاني">Portfolio · Volume 02</span>
+        <em class="hero__meta-jp">第二巻</em>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__line"><span class="reveal-text" data-delay="0.1"><span data-i18n-en="MURTADHA"  data-i18n-ar="مرتضى">MURTADHA</span></span></span>
+        <span class="hero__line hero__line--alt"><span class="reveal-text" data-delay="0.25"><span data-i18n-en="MUAYAD MAJID" data-i18n-ar="مؤيد مجيد">MUAYAD MAJID</span></span></span>
+        <span class="hero__line hero__line--small"><span class="reveal-text" data-delay="0.4">— モーション / 紋</span></span>
+      </h1>
+
+      <p class="hero__role reveal" data-delay="0.55"
+         data-i18n-en="Multimedia Designer <span class='sep'>/</span> Video Editor <span class='sep'>/</span> Visual Storyteller"
+         data-i18n-ar="مصمم وسائط <span class='sep'>/</span> مونتير فيديو <span class='sep'>/</span> صانع إطارات">
+        Multimedia Designer <span class="sep">/</span> Video Editor <span class="sep">/</span> Visual Storyteller
+      </p>
+
+      <p class="hero__tagline reveal" data-delay="0.7"
+         data-i18n-en="Building cinematic stories through motion, code, and frame. I treat every project like an opening sequence — sharp, deliberate, alive."
+         data-i18n-ar="أبني حكايات سينمائية عبر الموشن والكود والإطار. أتعامل مع كل مشروع كأنه افتتاحية فيلم — حادّ، مدروس، ينبض بالحياة.">
+        Building cinematic stories through motion, code, and frame.
+        I treat every project like an opening sequence — sharp, deliberate, alive.
+      </p>
+
+      <div class="hero__cta reveal" data-delay="0.85">
+        <a href="#projects" class="btn btn--primary" data-sfx="click">
+          <span class="btn__label" data-i18n-en="View Work" data-i18n-ar="شاهد الأعمال">View Work</span>
+          <span class="btn__arrow">→</span>
+        </a>
+        <a href="#contact" class="btn btn--ghost" data-sfx="click">
+          <span class="btn__label" data-i18n-en="Contact Me" data-i18n-ar="تواصل معي">Contact Me</span>
+          <span class="btn__arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="hero__stats reveal" data-delay="1.0">
+        <div class="stat">
+          <span class="stat__num">09<em>+</em></span>
+          <span class="stat__label" data-i18n-en="Tools in the kit" data-i18n-ar="أدوات بل صندوق">Tools in the kit</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">20<em>+</em></span>
+          <span class="stat__label" data-i18n-en="Posters in archive" data-i18n-ar="بوسترات بل أرشيف">Posters in archive</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">07<em>+</em></span>
+          <span class="stat__label" data-i18n-en="Years on this craft" data-i18n-ar="سنوات على الطريق">Years on this craft</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile panel -->
+    <div class="hero__right reveal" data-delay="0.4">
+      <div class="portrait">
+        <div class="portrait__frame">
+          <div class="portrait__bg"></div>
+          <div class="portrait__figure" aria-hidden="true">
+            <img class="portrait__photo" src="assets/profile.jpg" alt="" onerror="this.style.display='none'" />
+            <div class="portrait__duotone"></div>
+            <svg class="portrait__hud-svg" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <pattern id="lines" width="3" height="3" patternUnits="userSpaceOnUse">
+                  <path d="M0 0 L3 3" stroke="#F39200" stroke-opacity="0.22" stroke-width="0.4"/>
+                </pattern>
+              </defs>
+              <rect width="320" height="420" fill="url(#lines)" opacity="0.7"/>
+              <line x1="0" y1="80"  x2="320" y2="80"  stroke="#F39200" stroke-opacity="0.18" stroke-dasharray="2 4"/>
+              <line x1="0" y1="340" x2="320" y2="340" stroke="#F39200" stroke-opacity="0.18" stroke-dasharray="2 4"/>
+              <line x1="60"  y1="0" x2="60"  y2="420" stroke="#FFFFFF" stroke-opacity="0.05"/>
+              <line x1="260" y1="0" x2="260" y2="420" stroke="#FFFFFF" stroke-opacity="0.05"/>
+              <text x="20" y="40"  font-family="JetBrains Mono, monospace" font-size="10" fill="#F39200" opacity="0.9">ID · 0042</text>
+              <text x="20" y="54"  font-family="JetBrains Mono, monospace" font-size="9"  fill="#FFFFFF" opacity="0.55">MORNM / SUBJECT</text>
+              <text x="232" y="40" font-family="JetBrains Mono, monospace" font-size="10" fill="#F39200" opacity="0.9">ƒ 1.4</text>
+              <text x="232" y="400" font-family="JetBrains Mono, monospace" font-size="9" fill="#FFFFFF" opacity="0.55">SCAN · OK</text>
+              <text x="20" y="400" font-family="JetBrains Mono, monospace" font-size="9"  fill="#FFFFFF" opacity="0.55">PORTRAIT // 紋</text>
+            </svg>
+          </div>
+          <div class="portrait__scan"></div>
+
+          <div class="portrait__corner portrait__corner--tl"></div>
+          <div class="portrait__corner portrait__corner--tr"></div>
+          <div class="portrait__corner portrait__corner--bl"></div>
+          <div class="portrait__corner portrait__corner--br"></div>
+
+          <div class="portrait__tag">
+            <div class="portrait__tag-row">
+              <span>名前</span><strong data-i18n-en="MURTADHA M." data-i18n-ar="مرتضى م.">MURTADHA M.</strong>
+            </div>
+            <div class="portrait__tag-row">
+              <span>分野</span><strong data-i18n-en="MOTION / DESIGN" data-i18n-ar="موشن / تصميم">MOTION / DESIGN</strong>
+            </div>
+            <div class="portrait__tag-row">
+              <span>状態</span><strong class="ok" data-i18n-en="ONLINE" data-i18n-ar="متصل">ONLINE</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="portrait__kanji" aria-hidden="true">紋</div>
+      </div>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#about" data-sfx="click" aria-label="Scroll to about">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-text" data-i18n-en="SCROLL — 下へ" data-i18n-ar="انزل — 下へ">SCROLL — 下へ</span>
+  </a>
+</section>
+
+<!-- ::: ABOUT ::: -->
+<section class="section section--about" id="about">
+  <header class="section__head">
+    <span class="section__no">— 01</span>
+    <h2 class="section__title"><span data-i18n-en="About" data-i18n-ar="عني">About</span> <em>自己紹介</em></h2>
+    <span class="section__line"></span>
+  </header>
+
+  <div class="about__grid">
+    <article class="about__card glass reveal-up">
+      <div class="about__card-no">// 001</div>
+      <h3 class="about__card-title"
+          data-i18n-en="Hi — I'm Murtadha."
+          data-i18n-ar="هلا — اسمي مرتضى.">Hi — I'm Murtadha.</h3>
+      <p data-i18n-en="A student of multimedia from Baghdad. I design posters, cut videos, and slowly poke around code. Nothing fancy — I just like making things look nice."
+         data-i18n-ar="طالب وسائط متعددة من بغداد. أصمم بوسترات، أعدل فيديوات، وأجرب الكود على راحتي. ما عندي شي خارق — بس أحب أخلي الأشياء تطلع حلوة.">
+        A student of multimedia from Baghdad. I design posters, cut videos, and slowly poke around code.
+        Nothing fancy — I just like making things look nice.
+      </p>
+      <p data-i18n-en="I grew up on anime, and a lot of how I think about color, framing, and timing leaked in from those opening sequences I used to rewind too many times."
+         data-i18n-ar="كبرت أتابع أنمي، وأكثر تفكيري بالألوان والكادر والتوقيت دخلني من الإنتروهات اللي كنت أرجعها مرات هواية.">
+        I grew up on anime, and a lot of how I think about color, framing, and timing leaked in
+        from those opening sequences I used to rewind too many times.
+      </p>
+    </article>
+
+    <article class="about__card about__card--quote glass reveal-up" data-delay="0.15">
+      <span class="quote-mark">「</span>
+      <p data-i18n-en="If a frame can stop someone for a second — it did its job."
+         data-i18n-ar="إذا الإطار قدر يوقّف واحد ثانية — يكون أدّى شغله.">
+        If a frame can stop someone for a second — it did its job.
+      </p>
+      <span class="quote-mark quote-mark--end">」</span>
+      <div class="about__card-sign">— MORNM</div>
+    </article>
+
+    <article class="about__card about__card--tags glass reveal-up" data-delay="0.3">
+      <div class="about__card-no">// 002</div>
+      <h3 class="about__card-title"
+          data-i18n-en="What I'm into"
+          data-i18n-ar="شنو يعجبني">What I'm into</h3>
+      <div class="chips">
+        <span class="chip" data-i18n-en="Anime openings"  data-i18n-ar="إنتروهات أنمي">Anime openings</span>
+        <span class="chip" data-i18n-en="Poster design"   data-i18n-ar="تصميم بوسترات">Poster design</span>
+        <span class="chip" data-i18n-en="Video editing"   data-i18n-ar="مونتاج فيديو">Video editing</span>
+        <span class="chip" data-i18n-en="Black + orange"  data-i18n-ar="أسود + برتقالي">Black + orange</span>
+        <span class="chip" data-i18n-en="Late nights"     data-i18n-ar="سهرات ليل">Late nights</span>
+        <span class="chip" data-i18n-en="Cyberpunk vibes" data-i18n-ar="أجواء سايبربانك">Cyberpunk vibes</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ::: SKILLS ::: -->
+<section class="section section--skills" id="skills">
+  <header class="section__head">
+    <span class="section__no">— 02</span>
+    <h2 class="section__title"><span data-i18n-en="Skills" data-i18n-ar="المهارات">Skills</span> <em>技能</em></h2>
+    <span class="section__line"></span>
+  </header>
+
+  <p class="section__lead reveal-up"
+     data-i18n-en="Tools I reach for at 2am. Each rated by instinct — calibrated honestly, not inflated."
+     data-i18n-ar="أدوات أرجع لها الساعة 2 صباحاً. كل واحدة بتقييم صادق — معايرة بالحدس لا منفوخة.">
+    Tools I reach for at 2am. Each rated by instinct — calibrated honestly, not inflated.
+  </p>
+
+  <div class="skills__grid">
+
+    <article class="skill reveal-up" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">01</span>
+          <span class="skill__cat" data-i18n-en="Markup" data-i18n-ar="ترميز">Markup</span>
+        </div>
+        <h3 class="skill__name">HTML</h3>
+        <div class="skill__jp">構造</div>
+        <div class="skill__bar"><span style="--lvl:80%"></span></div>
+        <div class="skill__meta"><span>80 / 100</span><span data-i18n-en="★ Solid"     data-i18n-ar="★ متين">★ Solid</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.05" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">02</span>
+          <span class="skill__cat" data-i18n-en="Style" data-i18n-ar="تنسيق">Style</span>
+        </div>
+        <h3 class="skill__name">CSS</h3>
+        <div class="skill__jp">装飾</div>
+        <div class="skill__bar"><span style="--lvl:60%"></span></div>
+        <div class="skill__meta"><span>60 / 100</span><span data-i18n-en="★ Comfortable" data-i18n-ar="★ مرتاح">★ Comfortable</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.10" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">03</span>
+          <span class="skill__cat" data-i18n-en="Logic" data-i18n-ar="منطق">Logic</span>
+        </div>
+        <h3 class="skill__name">JavaScript</h3>
+        <div class="skill__jp">動作</div>
+        <div class="skill__bar"><span style="--lvl:40%"></span></div>
+        <div class="skill__meta"><span>40 / 100</span><span data-i18n-en="★ Learning" data-i18n-ar="★ أتعلّم">★ Learning</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.15" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">04</span>
+          <span class="skill__cat" data-i18n-en="Motion" data-i18n-ar="موشن">Motion</span>
+        </div>
+        <h3 class="skill__name">After Effects</h3>
+        <div class="skill__jp">動画</div>
+        <div class="skill__bar"><span style="--lvl:70%"></span></div>
+        <div class="skill__meta"><span>70 / 100</span><span data-i18n-en="★ Fluent" data-i18n-ar="★ طليق">★ Fluent</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.20" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">05</span>
+          <span class="skill__cat" data-i18n-en="Image" data-i18n-ar="صورة">Image</span>
+        </div>
+        <h3 class="skill__name">Photoshop</h3>
+        <div class="skill__jp">画像</div>
+        <div class="skill__bar"><span style="--lvl:90%"></span></div>
+        <div class="skill__meta"><span>90 / 100</span><span data-i18n-en="★ Native" data-i18n-ar="★ أصلي">★ Native</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.25" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">06</span>
+          <span class="skill__cat" data-i18n-en="Vector" data-i18n-ar="فيكتور">Vector</span>
+        </div>
+        <h3 class="skill__name">Illustrator</h3>
+        <div class="skill__jp">図形</div>
+        <div class="skill__bar"><span style="--lvl:70%"></span></div>
+        <div class="skill__meta"><span>70 / 100</span><span data-i18n-en="★ Fluent" data-i18n-ar="★ طليق">★ Fluent</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.30" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">07</span>
+          <span class="skill__cat" data-i18n-en="Edit" data-i18n-ar="مونتاج">Edit</span>
+        </div>
+        <h3 class="skill__name">Premiere</h3>
+        <div class="skill__jp">編集</div>
+        <div class="skill__bar"><span style="--lvl:60%"></span></div>
+        <div class="skill__meta"><span>60 / 100</span><span data-i18n-en="★ Comfortable" data-i18n-ar="★ مرتاح">★ Comfortable</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.35" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">08</span>
+          <span class="skill__cat" data-i18n-en="Systems" data-i18n-ar="أنظمة">Systems</span>
+        </div>
+        <h3 class="skill__name">C++</h3>
+        <div class="skill__jp">基盤</div>
+        <div class="skill__bar"><span style="--lvl:40%"></span></div>
+        <div class="skill__meta"><span>40 / 100</span><span data-i18n-en="★ Building" data-i18n-ar="★ أبني">★ Building</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.40" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">09</span>
+          <span class="skill__cat" data-i18n-en="3D" data-i18n-ar="ثلاثي">3D</span>
+        </div>
+        <h3 class="skill__name">Blender</h3>
+        <div class="skill__jp">立体</div>
+        <div class="skill__bar"><span style="--lvl:30%"></span></div>
+        <div class="skill__meta"><span>30 / 100</span><span data-i18n-en="★ Sketching" data-i18n-ar="★ أتلمّس">★ Sketching</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ::: PROJECTS ::: -->
+<section class="section section--projects" id="projects">
+  <header class="section__head">
+    <span class="section__no">— 03</span>
+    <h2 class="section__title">
+      <span data-i18n-en="Selected work" data-i18n-ar="مختارات">Selected work</span> <em>作品集</em>
+    </h2>
+    <span class="section__line"></span>
+  </header>
+
+  <p class="section__lead reveal-up"
+     data-i18n-en="A rolling archive of posters, identities, and visual experiments. Click any frame to zoom in."
+     data-i18n-ar="أرشيف متجدّد من البوسترات والهويّات والتجارب البصرية. اضغط أي إطار للتكبير.">
+    A rolling archive of posters, identities, and visual experiments. Click any frame to zoom in.
+  </p>
+
+  <div class="gallery" id="gallery">
+    <figure class="card card--featured" data-sfx-target>
+      <img src="assets/posts/p01.jpg" alt="MORNM poster — 01" loading="lazy" />
+      <figcaption class="card__cap">
+        <span class="card__tag" data-i18n-en="FEATURED · 主作" data-i18n-ar="مميز · 主作">FEATURED · 主作</span>
+        <span class="card__id">PRJ // 001</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card" data-sfx-target>
+      <img src="assets/posts/p02.jpg" alt="Poster — 02" loading="lazy" />
+      <figcaption class="card__cap"><span class="card__id">PRJ // 002</span></figcaption>
+    </figure>
+
+    <figure class="card" data-sfx-target>
+      <img src="assets/posts/p03.png" alt="Poster — 03" loading="lazy" />
+      <figcaption class="card__cap"><span class="card__id">PRJ // 003</span></figcaption>
+    </figure>
+
+    <figure class="card" data-sfx-target>
+      <img src="assets/posts/p04.png" alt="Poster — 04" loading="lazy" />
+      <figcaption class="card__cap"><span class="card__id">PRJ // 004</span></figcaption>
+    </figure>
+
+    <figure class="card" data-sfx-target>
+      <img src="assets/posts/p05.jpg" alt="Poster — 05" loading="lazy" />
+      <figcaption class="card__cap"><span class="card__id">PRJ // 005</span></figcaption>
+    </figure>
+
+    <figure class="card" data-sfx-target>
+      <img src="assets/posts/p06.jpg" alt="Poster — 06" loading="lazy" />
+      <figcaption class="card__cap"><span class="card__id">PRJ // 006</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="gallery__more reveal-up">
+    <a class="btn btn--primary btn--more" href="posters.html" data-sfx="click">
+      <span class="btn__label"
+            data-i18n-en="Open Full Archive"
+            data-i18n-ar="افتح الأرشيف الكامل">Open Full Archive</span>
+      <span class="btn__arrow">→</span>
+    </a>
+    <span class="gallery__count">
+      <span>06</span> / <span>47</span>
+    </span>
+  </div>
+</section>
+
+<!-- ::: PATH — interactive chart ::: -->
+<section class="section section--path" id="timeline">
+  <header class="section__head">
+    <span class="section__no">— 04</span>
+    <h2 class="section__title"><span data-i18n-en="Path" data-i18n-ar="المسار">Path</span> <em>道</em></h2>
+    <span class="section__line"></span>
+  </header>
+
+  <p class="section__lead reveal-up"
+     data-i18n-en="A short map of how I picked up the craft. Pick a window — the chart redraws."
+     data-i18n-ar="خريطة قصيرة عن الطريق اللي مشيته. اختار فترة — الخط البياني يتغير.">
+    A short map of how I picked up the craft. Pick a window — the chart redraws.
+  </p>
+
+  <div class="path reveal-up">
+    <div class="path__tabs" role="tablist">
+      <button class="path__tab is-active" data-year-idx="0" data-sfx="click" type="button">
+        <span class="path__tab-year">2019 — 2022</span>
+        <span class="path__tab-label" data-i18n-en="Phone era" data-i18n-ar="فترة الجوال">Phone era</span>
+      </button>
+      <button class="path__tab" data-year-idx="1" data-sfx="click" type="button">
+        <span class="path__tab-year">2022 — 2024</span>
+        <span class="path__tab-label" data-i18n-en="Getting fluent" data-i18n-ar="رويداً رويداً">Getting fluent</span>
+      </button>
+      <button class="path__tab" data-year-idx="2" data-sfx="click" type="button">
+        <span class="path__tab-year">2024 — 2026</span>
+        <span class="path__tab-label" data-i18n-en="PC + Adobe + Code" data-i18n-ar="PC و أدوبي و كود">PC + Adobe + Code</span>
+      </button>
+    </div>
+
+    <div class="path__body glass">
+      <div class="path__chart">
+        <div class="path__chart-head">
+          <span class="path__chart-axisY" data-i18n-en="KNOWLEDGE — Y" data-i18n-ar="المعرفة — Y">KNOWLEDGE — Y</span>
+          <span class="path__chart-axisX" data-i18n-en="DOMAINS — X" data-i18n-ar="المجالات — X">DOMAINS — X</span>
+        </div>
+        <svg viewBox="0 0 600 380" class="path__svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <linearGradient id="pathGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F39200" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#F39200" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="pathBlur" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3"/>
+            </filter>
+          </defs>
+
+          <!-- horizontal grid -->
+          <g class="path__grid">
+            <line x1="80" y1="320" x2="560" y2="320"/>
+            <line x1="80" y1="250" x2="560" y2="250"/>
+            <line x1="80" y1="180" x2="560" y2="180"/>
+            <line x1="80" y1="110" x2="560" y2="110"/>
+            <line x1="80" y1="40"  x2="560" y2="40"/>
+          </g>
+          <!-- vertical grid at category positions -->
+          <g class="path__grid path__grid--v">
+            <line x1="100" y1="40" x2="100" y2="320"/>
+            <line x1="210" y1="40" x2="210" y2="320"/>
+            <line x1="320" y1="40" x2="320" y2="320"/>
+            <line x1="430" y1="40" x2="430" y2="320"/>
+            <line x1="540" y1="40" x2="540" y2="320"/>
+          </g>
+
+          <!-- y-axis labels -->
+          <g class="path__ylabels">
+            <text x="70" y="324" text-anchor="end">0</text>
+            <text x="70" y="254" text-anchor="end">25</text>
+            <text x="70" y="184" text-anchor="end">50</text>
+            <text x="70" y="114" text-anchor="end">75</text>
+            <text x="70" y="44"  text-anchor="end">100</text>
+          </g>
+
+          <!-- x-axis category labels (filled by JS to support i18n) -->
+          <g class="path__xlabels">
+            <text x="100" y="350" text-anchor="middle" class="path__xlabel" data-cat-idx="0">Design</text>
+            <text x="210" y="350" text-anchor="middle" class="path__xlabel" data-cat-idx="1">Video</text>
+            <text x="320" y="350" text-anchor="middle" class="path__xlabel" data-cat-idx="2">Adobe</text>
+            <text x="430" y="350" text-anchor="middle" class="path__xlabel" data-cat-idx="3">Code</text>
+            <text x="540" y="350" text-anchor="middle" class="path__xlabel" data-cat-idx="4">3D</text>
+          </g>
+
+          <!-- area fill -->
+          <polygon class="path__area" points="100,320 210,320 320,320 430,320 540,320 540,320 100,320" fill="url(#pathGrad)"/>
+          <!-- glow line -->
+          <polyline class="path__glow" points="100,320 210,320 320,320 430,320 540,320" fill="none" filter="url(#pathBlur)"/>
+          <!-- main line -->
+          <polyline class="path__line" points="100,320 210,320 320,320 430,320 540,320" fill="none"/>
+
+          <!-- data points -->
+          <g class="path__points">
+            <circle class="path__pt" data-i="0" cx="100" cy="320" r="6"/>
+            <circle class="path__pt" data-i="1" cx="210" cy="320" r="6"/>
+            <circle class="path__pt" data-i="2" cx="320" cy="320" r="6"/>
+            <circle class="path__pt" data-i="3" cx="430" cy="320" r="6"/>
+            <circle class="path__pt" data-i="4" cx="540" cy="320" r="6"/>
+          </g>
+
+          <!-- numeric value above each point -->
+          <g class="path__values">
+            <text class="path__val" data-i="0" x="100" y="306" text-anchor="middle">0</text>
+            <text class="path__val" data-i="1" x="210" y="306" text-anchor="middle">0</text>
+            <text class="path__val" data-i="2" x="320" y="306" text-anchor="middle">0</text>
+            <text class="path__val" data-i="3" x="430" y="306" text-anchor="middle">0</text>
+            <text class="path__val" data-i="4" x="540" y="306" text-anchor="middle">0</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="path__desc">
+        <div class="path__desc-tag" id="pathYear">2019 — 2022</div>
+        <h3 class="path__desc-title" id="pathTitle">Phone era — first sparks</h3>
+        <p class="path__desc-text" id="pathText"></p>
+        <ul class="path__desc-bullets" id="pathBullets"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ::: CONTACT ::: -->
+<section class="section section--contact" id="contact">
+  <header class="section__head">
+    <span class="section__no">— 05</span>
+    <h2 class="section__title"><span data-i18n-en="Contact" data-i18n-ar="تواصل">Contact</span> <em>連絡</em></h2>
+    <span class="section__line"></span>
+  </header>
+
+  <div class="contact">
+    <div class="contact__left reveal-up">
+      <h3 class="contact__big">
+        <span data-i18n-en="Let's make"   data-i18n-ar="خلّينا نسوّي">Let's make</span>
+        <span class="accent" data-i18n-en="something" data-i18n-ar="شيء">something</span>
+        <span data-i18n-en="worth re-watching." data-i18n-ar="يستاهل المشاهدة مرتين.">worth re-watching.</span>
+      </h3>
+      <p class="contact__lead"
+         data-i18n-en="Open for commissions, collaborations, and creative residencies. Reply usually within 24 hours — sometimes between frames."
+         data-i18n-ar="مفتوح للتكاليف والتعاونات والإقامات الإبداعية. الردّ عادةً خلال 24 ساعة — أحياناً بين إطارين.">
+        Open for commissions, collaborations, and creative residencies. Reply usually
+        within 24 hours — sometimes between frames.
+      </p>
+
+      <a href="mailto:s12345.ss203@gmail.com" class="btn btn--primary btn--lg" data-sfx="click">
+        <span class="btn__label">s12345.ss203@gmail.com</span>
+        <span class="btn__arrow">→</span>
+      </a>
+
+      <div class="contact__socials">
+        <a href="https://instagram.com/mornm_" target="_blank" rel="noopener" data-sfx="hover" aria-label="Instagram">
+          <span class="soc__jp">IG</span>
+          <span class="soc__name" data-i18n-en="Instagram" data-i18n-ar="إنستغرام">Instagram</span>
+          <span class="soc__handle">@mornm_</span>
+        </a>
+        <a href="tel:+9647702393508" data-sfx="hover" aria-label="Phone">
+          <span class="soc__jp">電</span>
+          <span class="soc__name" data-i18n-en="Phone" data-i18n-ar="هاتف">Phone</span>
+          <span class="soc__handle" dir="ltr">+964 770 239 3508</span>
+        </a>
+        <a href="mailto:s12345.ss203@gmail.com" data-sfx="hover" aria-label="Email">
+          <span class="soc__jp">@</span>
+          <span class="soc__name" data-i18n-en="Email" data-i18n-ar="إيميل">Email</span>
+          <span class="soc__handle">s12345.ss203</span>
+        </a>
+        <a href="https://www.google.com/maps?q=Al-Shu'la,Baghdad" target="_blank" rel="noopener" data-sfx="hover" aria-label="Location">
+          <span class="soc__jp">所</span>
+          <span class="soc__name" data-i18n-en="Location" data-i18n-ar="الموقع">Location</span>
+          <span class="soc__handle" data-i18n-en="Baghdad · Shu'la" data-i18n-ar="بغداد · الشعلة">Baghdad · Shu'la</span>
+        </a>
+      </div>
+    </div>
+
+    <aside class="contact__panel glass reveal-up" data-delay="0.2">
+      <div class="contact__panel-head">
+        <span class="dot"></span>
+        <span data-i18n-en="DIRECT · CHANNELS" data-i18n-ar="قنوات · مباشرة">DIRECT · CHANNELS</span>
+        <em>連絡</em>
+      </div>
+      <ul class="contact__panel-list">
+        <li>
+          <span data-i18n-en="Email" data-i18n-ar="إيميل">Email</span>
+          <strong dir="ltr">s12345.ss203@gmail.com</strong>
+        </li>
+        <li>
+          <span data-i18n-en="Phone" data-i18n-ar="هاتف">Phone</span>
+          <strong dir="ltr">+964 770 239 3508</strong>
+        </li>
+        <li>
+          <span data-i18n-en="Instagram" data-i18n-ar="إنستغرام">Instagram</span>
+          <strong dir="ltr">@mornm_</strong>
+        </li>
+        <li>
+          <span data-i18n-en="Location" data-i18n-ar="الموقع">Location</span>
+          <strong data-i18n-en="Baghdad · Shu'la" data-i18n-ar="بغداد · الشعلة">Baghdad · Shu'la</strong>
+        </li>
+      </ul>
+      <div class="contact__panel-kanji">紋</div>
+    </aside>
+  </div>
+</section>
+
+<!-- ::: FOOTER ::: -->
+<footer class="footer">
+  <div class="footer__row">
+    <div class="footer__brand">
+      <span class="footer__mark">▲</span>
+      <span>MORNM · MEMORIA</span>
+      <em>記憶の断片</em>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 <span data-i18n-en="Murtadha Muayad Majid" data-i18n-ar="مرتضى مؤيد مجيد">Murtadha Muayad Majid</span></span>
+      <span class="dotsep">·</span>
+      <span data-i18n-en="Designed in the dark, animated frame by frame."
+            data-i18n-ar="صُمّم في الظلام، حُرّك إطاراً بعد إطار.">Designed in the dark, animated frame by frame.</span>
+    </div>
+    <div class="footer__top">
+      <a href="#hero" data-sfx="click">
+        <span data-i18n-en="Back to top" data-i18n-ar="للأعلى">Back to top</span> <span>↑</span>
+      </a>
+    </div>
+  </div>
+  <div class="footer__strip" aria-hidden="true">
+    <span>記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · 記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM ·</span>
+    <span>記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · 記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM ·</span>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous">‹</button>
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next">›</button>
+  <figure class="lightbox__inner">
+    <img id="lightboxImg" src="" alt="" />
+    <figcaption id="lightboxCap"></figcaption>
+  </figure>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
