@@ -30,6 +30,31 @@
   };
   setTimeout(tick, 200);
 
+  /* ---------- IMAGE LOAD HANDLING (skeleton + fade-in) ---------- */
+  const markLoaded = (img) => {
+    img.classList.add('is-loaded');
+    const wrap = img.closest('.card, .tile');
+    if (wrap) wrap.classList.add('is-loaded');
+  };
+  const bindImageLoading = () => {
+    document.querySelectorAll('img').forEach(img => {
+      // Skip SVG icons inside nav etc — only treat <img> with src
+      if (!img.src && !img.dataset.src) return;
+      if (img.complete && img.naturalWidth > 0) {
+        markLoaded(img);
+      } else {
+        img.addEventListener('load',  () => markLoaded(img), { once: true });
+        img.addEventListener('error', () => {
+          // Hide broken portrait/etc so wrapper bg stays clean
+          if (img.classList.contains('portrait__photo')) img.style.display = 'none';
+          const wrap = img.closest('.card, .tile');
+          if (wrap) wrap.classList.add('is-loaded'); // remove shimmer even on error
+        }, { once: true });
+      }
+    });
+  };
+  bindImageLoading();
+
   /* ---------- I18N — LANGUAGE TOGGLE ---------- */
   const LANG_KEY = 'mornm.lang';
   const langToggle = document.getElementById('langToggle');
@@ -102,6 +127,8 @@
   /* ---------- SCROLL SPY ---------- */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav__links a');
+  // Thin trigger strip at ~38% from top of viewport — when a section
+  // passes through this strip, it becomes the active one.
   const spy = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -111,7 +138,7 @@
         });
       }
     });
-  }, { threshold: 0.35, rootMargin: '-20% 0px -40% 0px' });
+  }, { threshold: 0, rootMargin: '-38% 0px -57% 0px' });
   sections.forEach(s => spy.observe(s));
 
   /* ---------- SOUND (Web Audio API generated) ---------- */
@@ -417,8 +444,12 @@
     const card = cards[lbIndex];
     const img = card.querySelector('img');
     const id = card.querySelector('.card__id');
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
+    // Always show full-res in the lightbox, regardless of which srcset
+    // candidate was picked for the thumbnail.
+    const fullSrc = (img && img.dataset && img.dataset.fullsrc) || (img && img.currentSrc) || (img && img.src) || '';
+    lightboxImg.removeAttribute('srcset'); // ensure browser uses the chosen src
+    lightboxImg.src = fullSrc;
+    lightboxImg.alt = img ? img.alt : '';
     lightboxCap.textContent = id ? id.textContent : '';
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');

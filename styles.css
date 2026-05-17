@@ -334,8 +334,26 @@ html[dir="rtl"] .contact__panel-kanji{ left: -20px; right: auto; }
 .nav__links a:hover{ color: var(--c-fg); }
 .nav__links a:hover em{ color: var(--c-accent); }
 .nav__links a:hover::after{ left: 0; right: 0; }
-.nav__links a.is-active{ color: var(--c-fg); }
-.nav__links a.is-active::after{ left:0; right:0; }
+
+/* Active section — clearly highlighted */
+.nav__links a.is-active{
+  color: var(--c-accent);
+  text-shadow: 0 0 12px rgba(243, 146, 0, 0.45);
+}
+.nav__links a.is-active i{
+  color: var(--c-fg);
+  opacity: 1;
+}
+.nav__links a.is-active em{
+  color: var(--c-accent);
+  opacity: 1;
+}
+.nav__links a.is-active::after{
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--c-accent);
+  box-shadow: 0 0 12px var(--c-glow), 0 0 4px var(--c-accent);
+}
 
 .nav__right{
   display: inline-flex; align-items: center; gap: 10px;
@@ -1606,25 +1624,50 @@ html[dir="rtl"] .contact__socials a:hover{ padding-left: 6px; padding-right: 16p
   .skill__name{ font-size: clamp(26px, 7vw, 32px); }
   .skill__jp{ font-size: 44px; right: 18px; }
 
-  /* PATH — tabs stack, body single column */
-  .path__tabs{ flex-direction: column; gap: 0; }
+  /* PATH — tabs stay horizontal but compact, body single column */
+  .path__tabs{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
   .path__tab{
-    flex: 1 1 auto;
-    padding: 14px 18px;
-    border-bottom: 1px solid var(--c-line);
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 10px 8px;
+    text-align: center;
+    align-items: center;
+    border-bottom: 0;
+    gap: 2px;
   }
   .path__tab + .path__tab{
-    border-left: 1px solid var(--c-line);
-    border-top: 0;
+    border-left: 0;
+    border-top: 1px solid var(--c-line);
   }
   html[dir="rtl"] .path__tab + .path__tab{
-    border-right: 1px solid var(--c-line);
-    border-left: 1px solid var(--c-line);
+    border-right: 0;
+    border-left: 0;
+    border-top: 1px solid var(--c-line);
   }
   .path__tab::before{ display: none; }
-  .path__tab-year{ font-size: 20px; }
-  .path__tab-label{ font-size: 10px; letter-spacing: 0.18em; }
-  .path__body{ padding: 24px 18px; gap: 28px; }
+  .path__tab-year{
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+  .path__tab-label{
+    font-size: 8px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    opacity: 0.7;
+  }
+  .path__body{ padding: 20px 16px; gap: 20px; }
+  .path__chart-head{ display: none; }
+  .path__desc{ padding: 0; }
+  .path__desc-bullets{ gap: 8px; }
   .path__chart-head{ font-size: 9px; letter-spacing: 0.2em; }
   /* Bigger SVG text so labels stay readable when scaled down */
   .path__ylabels text{ font-size: 14px; }
@@ -1712,6 +1755,12 @@ html[dir="rtl"] .contact__socials a:hover{ padding-left: 6px; padding-right: 16p
   .nav__brand-text{ display: none; }
   .nav__lang-text{ display: none; }
   .nav__lang{ padding: 7px 9px; }
+
+  /* Path tabs: hide label sub-text, year only, super compact */
+  .path__tab-label{ display: none; }
+  .path__tab{ padding: 12px 6px; }
+  .path__tab-year{ font-size: 13px; }
+  .path__body{ padding: 16px 12px; }
 }
 
 /* Touch devices — keep tile strip and card captions visible */
@@ -2013,6 +2062,56 @@ html[dir="rtl"] .gallery.is-expanded .card.is-extra{ animation-name: cardSweepR;
   color: var(--c-muted);
 }
 .gallery__count #visibleCount{ color: var(--c-accent); }
+
+/* ============================================================
+   IMAGE LOADING — skeleton placeholder + fade-in
+   ============================================================ */
+.card,
+.tile{
+  position: relative;
+  isolation: isolate; /* keep ::before below img but above bg */
+}
+.card::before,
+.tile::before{
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(110deg, #131316 0%, #131316 30%, #1f1308 50%, #131316 70%, #131316 100%);
+  background-size: 220% 100%;
+  background-position: 200% 0;
+  animation: shimmer 1.8s linear infinite;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 0.55s ease 0.15s;
+  pointer-events: none;
+}
+.card.is-loaded::before,
+.tile.is-loaded::before{
+  opacity: 0;
+  animation: none;
+}
+@keyframes shimmer{
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.card > img,
+.tile > img{
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.6s ease, filter 0.5s var(--easing), transform 0.8s var(--easing);
+}
+.card > img.is-loaded,
+.tile > img.is-loaded{
+  opacity: 1;
+}
+/* portrait photo also fades in */
+.portrait__photo{
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.portrait__photo.is-loaded{
+  opacity: 1;
+}
 
 /* ============================================================
    ACCESSIBILITY — keyboard focus

@@ -3,14 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MEMORIA — Murtadha M. Majid · Multimedia Designer</title>
-<meta name="description" content="Cinematic portfolio of Murtadha Muayad Majid — multimedia designer, video editor, and visual storyteller. MORNM · 紋. Baghdad-based." />
+<title>MEMORIA — Murtadha M. Majid · Multimedia Designer</title>programmer
+<meta name="description" content="Cinematic portfolio of Murtadha Muayad Majid — multimedia designer, video editor, and programmer. MORNM · 紋. Baghdad-based." />
 <meta name="author" content="Murtadha Muayad Majid" />
 <meta name="theme-color" content="#0A0A0A" />
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+<!-- Preload above-the-fold portrait (smallest variant + responsive set) -->
+<link rel="preload" as="image"
+      href="assets/profile-480.jpg"
+      imagesrcset="assets/profile-480.jpg 480w, assets/profile.jpg 780w"
+      imagesizes="(max-width: 600px) 280px, 380px" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="MEMORIA — Murtadha M. Majid · Multimedia Designer" />
@@ -126,9 +132,9 @@
       </h1>
 
       <p class="hero__role reveal" data-delay="0.55"
-         data-i18n-en="Multimedia Designer <span class='sep'>/</span> Video Editor <span class='sep'>/</span> Visual Storyteller"
+         data-i18n-en="Multimedia Designer <span class='sep'>/</span> Video Editor <span class='sep'>/</span> programmer"
          data-i18n-ar="مصمم وسائط <span class='sep'>/</span> مونتير فيديو <span class='sep'>/</span> صانع إطارات">
-        Multimedia Designer <span class="sep">/</span> Video Editor <span class="sep">/</span> Visual Storyteller
+        Multimedia Designer <span class="sep">/</span> Video Editor <span class="sep">/</span> programmer
       </p>
 
       <p class="hero__tagline reveal" data-delay="0.7"
@@ -171,7 +177,14 @@
         <div class="portrait__frame">
           <div class="portrait__bg"></div>
           <div class="portrait__figure" aria-hidden="true">
-            <img class="portrait__photo" src="assets/profile.jpg" alt="" onerror="this.style.display='none'" />
+            <img class="portrait__photo"
+                 src="assets/profile-480.jpg"
+                 srcset="assets/profile-480.jpg 480w, assets/profile.jpg 780w"
+                 sizes="(max-width: 600px) 280px, 380px"
+                 alt=""
+                 fetchpriority="high"
+                 decoding="async"
+                 onerror="this.style.display='none'" />
             <div class="portrait__duotone"></div>
             <svg class="portrait__hud-svg" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
               <defs>
@@ -429,7 +442,11 @@
 
   <div class="gallery" id="gallery">
     <figure class="card card--featured" data-sfx-target>
-      <img src="assets/posts/p01.jpg" alt="MORNM poster — 01" loading="lazy" />
+      <img src="assets/posts/thumbs/p01.jpg"
+           srcset="assets/posts/thumbs/p01.jpg 600w, assets/posts/p01.jpg 1600w"
+           sizes="(max-width: 600px) 100vw, (max-width: 980px) 70vw, 60vw"
+           data-fullsrc="assets/posts/p01.jpg"
+           alt="MORNM poster — 01" loading="lazy" decoding="async" />
       <figcaption class="card__cap">
         <span class="card__tag" data-i18n-en="FEATURED · 主作" data-i18n-ar="مميز · 主作">FEATURED · 主作</span>
         <span class="card__id">PRJ // 001</span>
@@ -437,27 +454,47 @@
     </figure>
 
     <figure class="card" data-sfx-target>
-      <img src="assets/posts/p02.jpg" alt="Poster — 02" loading="lazy" />
+      <img src="assets/posts/thumbs/p02.jpg"
+           srcset="assets/posts/thumbs/p02.jpg 600w, assets/posts/p02.jpg 1600w"
+           sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 33vw"
+           data-fullsrc="assets/posts/p02.jpg"
+           alt="Poster — 02" loading="lazy" decoding="async" />
       <figcaption class="card__cap"><span class="card__id">PRJ // 002</span></figcaption>
     </figure>
 
     <figure class="card" data-sfx-target>
-      <img src="assets/posts/p03.png" alt="Poster — 03" loading="lazy" />
+      <img src="assets/posts/thumbs/p03.jpg"
+           srcset="assets/posts/thumbs/p03.jpg 600w, assets/posts/p03.png 1600w"
+           sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 33vw"
+           data-fullsrc="assets/posts/p03.png"
+           alt="Poster — 03" loading="lazy" decoding="async" />
       <figcaption class="card__cap"><span class="card__id">PRJ // 003</span></figcaption>
     </figure>
 
     <figure class="card" data-sfx-target>
-      <img src="assets/posts/p04.png" alt="Poster — 04" loading="lazy" />
+      <img src="assets/posts/thumbs/p04.jpg"
+           srcset="assets/posts/thumbs/p04.jpg 600w, assets/posts/p04.png 1600w"
+           sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 33vw"
+           data-fullsrc="assets/posts/p04.png"
+           alt="Poster — 04" loading="lazy" decoding="async" />
       <figcaption class="card__cap"><span class="card__id">PRJ // 004</span></figcaption>
     </figure>
 
     <figure class="card" data-sfx-target>
-      <img src="assets/posts/p05.jpg" alt="Poster — 05" loading="lazy" />
+      <img src="assets/posts/thumbs/p05.jpg"
+           srcset="assets/posts/thumbs/p05.jpg 600w, assets/posts/p05.jpg 1600w"
+           sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 33vw"
+           data-fullsrc="assets/posts/p05.jpg"
+           alt="Poster — 05" loading="lazy" decoding="async" />
       <figcaption class="card__cap"><span class="card__id">PRJ // 005</span></figcaption>
     </figure>
 
     <figure class="card" data-sfx-target>
-      <img src="assets/posts/p06.jpg" alt="Poster — 06" loading="lazy" />
+      <img src="assets/posts/thumbs/p06.jpg"
+           srcset="assets/posts/thumbs/p06.jpg 600w, assets/posts/p06.jpg 1600w"
+           sizes="(max-width: 600px) 100vw, (max-width: 980px) 50vw, 33vw"
+           data-fullsrc="assets/posts/p06.jpg"
+           alt="Poster — 06" loading="lazy" decoding="async" />
       <figcaption class="card__cap"><span class="card__id">PRJ // 006</span></figcaption>
     </figure>
   </div>

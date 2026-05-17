@@ -245,19 +245,33 @@
 
   POSTERS.forEach((p, i) => {
     const idx = String(i + 1).padStart(3, '0');
-    const ext = p.f.split('.').pop().toUpperCase();
+    const extLower = p.f.split('.').pop().toLowerCase();
+    const extUpper = extLower.toUpperCase();
+    const base = p.f.replace(/\.[^.]+$/, '');
+    // thumbs are .jpg unless original was animated gif
+    const thumb = (extLower === 'gif')
+      ? `assets/posts/thumbs/${p.f}`
+      : `assets/posts/thumbs/${base}.jpg`;
+    const full = `assets/posts/${p.f}`;
+
     const tile = document.createElement('figure');
     tile.className = 'tile card';
     tile.setAttribute('data-sfx-target', '');
     tile.style.setProperty('--idx', i);
     tile.innerHTML = `
-      <img src="assets/posts/${p.f}" loading="lazy" alt="Poster ${idx}" />
+      <img src="${thumb}"
+           srcset="${thumb} 600w, ${full} 1600w"
+           sizes="(max-width: 720px) 50vw, (max-width: 1080px) 33vw, 25vw"
+           data-fullsrc="${full}"
+           loading="lazy"
+           decoding="async"
+           alt="Poster ${idx}" />
       <div class="tile__overlay" aria-hidden="true">
         <span class="tile__zoom" data-i18n-en="VIEW" data-i18n-ar="عرض">VIEW</span>
       </div>
       <div class="tile__strip">
         <span class="tile__no">${idx} / ${total}</span>
-        <span class="tile__type">${ext}</span>
+        <span class="tile__type">${extUpper}</span>
       </div>
       <figcaption class="card__cap" hidden><span class="card__id">PRJ // ${idx}</span></figcaption>
     `;
