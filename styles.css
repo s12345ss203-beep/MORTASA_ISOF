@@ -90,17 +90,6 @@ html[lang="ar"] .hero__scroll-text{
   font-family: var(--ff-ar-body);
   letter-spacing: 0.04em;
 }
-html[lang="ar"] .skill__meta,
-html[lang="ar"] .contact__panel-list strong,
-html[lang="ar"] .stat__num,
-html[lang="ar"] .tl-year,
-html[lang="ar"] .hud__tag,
-html[lang="ar"] .card__id,
-html[lang="ar"] .card__tag,
-html[lang="ar"] .nav__brand{
-  /* keep latin/mono fonts even in AR mode for IDs and numbers */
-}
-
 /* Flip directional elements on RTL */
 html[dir="rtl"] .btn__arrow,
 html[dir="rtl"] .project__btn .arr{
@@ -1099,9 +1088,10 @@ html[dir="rtl"] .card__id{ margin-left: 0; margin-right: auto; }
   background: linear-gradient(180deg, transparent, var(--c-line-strong) 8%, var(--c-line-strong) 92%, transparent);
   transform: translateX(-50%);
 }
-@media (max-width: 800px){ .timeline__rail{ left: 20px; } }
-html[dir="rtl"] .timeline__rail{ }
-html[dir="rtl"] @media (max-width: 800px){ .timeline__rail{ left: auto; right: 20px; } }
+@media (max-width: 800px){
+  .timeline__rail{ left: 20px; }
+  html[dir="rtl"] .timeline__rail{ left: auto; right: 20px; }
+}
 
 .tl-item{
   position: relative;
@@ -2093,24 +2083,17 @@ html[dir="rtl"] .gallery.is-expanded .card.is-extra{ animation-name: cardSweepR;
   0%   { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+/* Images always render natively — no opacity tricks that can hide them.
+   The ::before shimmer below sits underneath and fades when load fires. */
 .card > img,
 .tile > img{
   position: relative;
   z-index: 1;
-  opacity: 0;
-  transition: opacity 0.6s ease, filter 0.5s var(--easing), transform 0.8s var(--easing);
+  transition: filter 0.5s var(--easing), transform 0.8s var(--easing);
 }
-.card > img.is-loaded,
-.tile > img.is-loaded{
-  opacity: 1;
-}
-/* portrait photo also fades in */
+/* Portrait photo — render natively, no opacity tricks */
 .portrait__photo{
-  opacity: 0;
-  transition: opacity 0.7s ease;
-}
-.portrait__photo.is-loaded{
-  opacity: 1;
+  transition: filter 0.5s var(--easing);
 }
 
 /* ============================================================
@@ -2148,10 +2131,6 @@ html[dir="rtl"] .gallery.is-expanded .card.is-extra{ animation-name: cardSweepR;
 /* ============================================================
    ARCHIVE PAGE (posters.html)
    ============================================================ */
-body.page-archive{
-  /* archive page tweaks if needed */
-}
-
 .archive-hero{
   position: relative;
   z-index: 2;
