@@ -248,21 +248,18 @@
     const extLower = p.f.split('.').pop().toLowerCase();
     const extUpper = extLower.toUpperCase();
     const base = p.f.replace(/\.[^.]+$/, '');
-    // thumbs are .jpg unless original was animated gif
-    const thumb = (extLower === 'gif')
+    // Only thumbnails are used as the image source.
+    const src = (extLower === 'gif')
       ? `assets/posts/thumbs/${p.f}`
       : `assets/posts/thumbs/${base}.jpg`;
-    const full = `assets/posts/${p.f}`;
 
     const tile = document.createElement('figure');
     tile.className = 'tile card';
     tile.setAttribute('data-sfx-target', '');
     tile.style.setProperty('--idx', i);
     tile.innerHTML = `
-      <img src="${thumb}"
-           srcset="${thumb} 600w, ${full} 1600w"
-           sizes="(max-width: 720px) 50vw, (max-width: 1080px) 33vw, 25vw"
-           data-fullsrc="${full}"
+      <img src="${src}"
+           data-fullsrc="${src}"
            loading="lazy"
            decoding="async"
            alt="Poster ${idx}" />

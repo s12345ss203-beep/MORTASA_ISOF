@@ -30,26 +30,43 @@
   };
   setTimeout(tick, 200);
 
-  /* ---------- IMAGE LOAD HANDLING (skeleton + fade-in) ---------- */
+  /* ---------- IMAGE LOAD HANDLING (skeleton + auto-fallback) ---------- */
   const markLoaded = (img) => {
     img.classList.add('is-loaded');
     const wrap = img.closest('.card, .tile');
     if (wrap) wrap.classList.add('is-loaded');
   };
+  // If a thumb/srcset candidate 404s, retry once using data-fullsrc (or
+  // raw src without srcset). If that also fails, hide gracefully.
+  const tryFallback = (img) => {
+    if (img.dataset.tried) {
+      // already tried fallback — give up
+      if (img.classList.contains('portrait__photo')) img.style.display = 'none';
+      const wrap = img.closest('.card, .tile');
+      if (wrap) wrap.classList.add('is-loaded');
+      return;
+    }
+    img.dataset.tried = '1';
+    const fb = img.dataset.fullsrc;
+    img.removeAttribute('srcset');
+    if (fb) {
+      img.src = fb;
+    } else {
+      // strip query string / try .png alt for png originals
+      img.src = img.src.split('?')[0];
+    }
+  };
   const bindImageLoading = () => {
     document.querySelectorAll('img').forEach(img => {
-      // Skip SVG icons inside nav etc — only treat <img> with src
       if (!img.src && !img.dataset.src) return;
       if (img.complete && img.naturalWidth > 0) {
         markLoaded(img);
+      } else if (img.complete && img.naturalWidth === 0) {
+        // already failed before bind ran
+        tryFallback(img);
       } else {
-        img.addEventListener('load',  () => markLoaded(img), { once: true });
-        img.addEventListener('error', () => {
-          // Hide broken portrait/etc so wrapper bg stays clean
-          if (img.classList.contains('portrait__photo')) img.style.display = 'none';
-          const wrap = img.closest('.card, .tile');
-          if (wrap) wrap.classList.add('is-loaded'); // remove shimmer even on error
-        }, { once: true });
+        img.addEventListener('load',  () => markLoaded(img));
+        img.addEventListener('error', () => tryFallback(img));
       }
     });
   };
