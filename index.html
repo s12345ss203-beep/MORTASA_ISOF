@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MEMORIA — Murtadha M. Majid · Multimedia Designer</title>programmer
-<meta name="description" content="Cinematic portfolio of Murtadha Muayad Majid — multimedia designer, video editor, and programmer. MORNM · 紋. Baghdad-based." />
+<title>MEMORIA — Murtadha M. Majid · Multimedia Designer</title>
+<meta name="description" content="Cinematic portfolio of Murtadha Muayad Majid — multimedia designer, video editor, and programmer from Baghdad. Campaigns for Mytime and Clving, posters, print and motion. MORNM · 紋." />
 <meta name="author" content="Murtadha Muayad Majid" />
 <meta name="theme-color" content="#0A0A0A" />
 
 <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-<link rel="apple-touch-icon" href="assets/favicon.svg" />
+<!-- Favicon: MORNM logo, transparent PNG (cream ink for dark browser UI) -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" media="(prefers-color-scheme: light)" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-dark-32.png" media="(prefers-color-scheme: dark)" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/favicon-192.png" />
 
 <!-- Preload above-the-fold portrait (smallest variant + responsive set) -->
 <link rel="preload" as="image"
       href="assets/profile-480.jpg"
       imagesrcset="assets/profile-480.jpg 480w, assets/profile.jpg 780w"
-      imagesizes="(max-width: 600px) 280px, 380px" />
+      imagesizes="(max-width: 600px) 280px, 377px" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="MEMORIA — Murtadha M. Majid · Multimedia Designer" />
-<meta property="og:description" content="Cinematic portfolio · Posters, video edits, and visual experiments. MORNM · 紋" />
+<meta property="og:description" content="Cinematic portfolio · Campaigns, posters, print and motion. MORNM · 紋" />
 <meta property="og:image" content="assets/og-cover.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -36,9 +39,24 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syncopate:wght@400;700&family=Outfit:wght@200;300;400;500;600;700&family=Shippori+Mincho:wght@400;500;700&family=JetBrains+Mono:wght@300;400;500&family=Tajawal:wght@400;500;700;800;900&family=Reem+Kufi:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700&family=Shippori+Mincho:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Tajawal:wght@400;500;700;800&family=Reem+Kufi:wght@500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=13" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Murtadha Muayad Majid",
+  "alternateName": "MORNM",
+  "jobTitle": "Multimedia Designer, Video Editor, Programmer",
+  "email": "mailto:s12345.ss203@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Baghdad", "addressCountry": "IQ" },
+  "sameAs": ["https://instagram.com/mornm_"],
+  "knowsAbout": ["Social media campaigns", "Poster design", "Print design", "Video editing", "Motion graphics", "Adobe Photoshop", "Adobe After Effects", "Adobe Illustrator", "Adobe Premiere Pro", "HTML", "CSS", "JavaScript", "C++", "Blender"]
+}
+</script>
 </head>
 <body>
 
@@ -61,7 +79,7 @@
     <div class="boot__crosshair boot__crosshair--tr"></div>
     <div class="boot__crosshair boot__crosshair--bl"></div>
     <div class="boot__crosshair boot__crosshair--br"></div>
-    <div class="boot__label" data-i18n-en="SYS / INIT" data-i18n-ar="تشغيل / النظام">SYS / INIT</div>
+    <div class="boot__label" data-i18n-en="SYS / INIT" data-i18n-ar="النظام / تشغيل">SYS / INIT</div>
     <div class="boot__title">M E M O R I A</div>
     <div class="boot__sub" data-i18n-en="記憶 — Loading visual cortex" data-i18n-ar="記憶 — جارٍ تحميل الذاكرة البصرية">記憶 — Loading visual cortex</div>
     <div class="boot__bar"><div class="boot__bar-fill" id="bootBar"></div></div>
@@ -76,12 +94,13 @@
     <span class="nav__brand-text">MORNM</span>
     <span class="nav__brand-jp">紋</span>
   </a>
-  <nav class="nav__links" aria-label="Primary">
-    <a href="#about"    data-sfx="hover"><i>01</i> <span data-i18n-en="About"   data-i18n-ar="عني">About</span>   <em>自己</em></a>
-    <a href="#skills"   data-sfx="hover"><i>02</i> <span data-i18n-en="Skills"  data-i18n-ar="المهارات">Skills</span>  <em>技能</em></a>
-    <a href="#projects" data-sfx="hover"><i>03</i> <span data-i18n-en="Work"    data-i18n-ar="الأعمال">Work</span>    <em>作品</em></a>
-    <a href="#timeline" data-sfx="hover"><i>04</i> <span data-i18n-en="Path"    data-i18n-ar="المسار">Path</span>    <em>道</em></a>
-    <a href="#contact"  data-sfx="hover"><i>05</i> <span data-i18n-en="Contact" data-i18n-ar="تواصل">Contact</span> <em>連絡</em></a>
+  <nav class="nav__links" id="navLinks" aria-label="Primary">
+    <a href="#work"     data-sfx="hover"><i>01</i> <span data-i18n-en="Work"       data-i18n-ar="الأعمال">Work</span>      <em>作品</em></a>
+    <a href="#logos"    data-sfx="hover"><i>02</i> <span data-i18n-en="Identities" data-i18n-ar="الهويات">Identities</span> <em>標章</em></a>
+    <a href="#about"    data-sfx="hover"><i>03</i> <span data-i18n-en="About"      data-i18n-ar="عني">About</span>     <em>自己</em></a>
+    <a href="#skills"   data-sfx="hover"><i>04</i> <span data-i18n-en="Skills"     data-i18n-ar="المهارات">Skills</span>    <em>技能</em></a>
+    <a href="#timeline" data-sfx="hover"><i>05</i> <span data-i18n-en="Path"       data-i18n-ar="المسار">Path</span>      <em>道</em></a>
+    <a href="#contact"  data-sfx="hover"><i>06</i> <span data-i18n-en="Contact"    data-i18n-ar="تواصل">Contact</span>   <em>連絡</em></a>
   </nav>
   <div class="nav__right">
     <button class="nav__lang" id="langToggle" data-sfx="click" aria-label="Toggle language">
@@ -93,22 +112,36 @@
       </svg>
       <span class="nav__lang-text" id="langText">عربي</span>
     </button>
-    <button class="nav__sound" id="soundToggle" data-sfx="click" aria-label="Toggle sound">
+    <button class="nav__music" id="musicToggle" data-sfx="click" aria-label="Toggle music" aria-pressed="false">
+      <span class="nav__music-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="nav__music-text">MUSIC · OFF</span>
+    </button>
+    <button class="nav__sound is-off" id="soundToggle" data-sfx="click" aria-label="Toggle sound" aria-pressed="false">
       <span class="nav__sound-dot"></span>
-      <span class="nav__sound-text">SFX · ON</span>
+      <span class="nav__sound-text">SFX · OFF</span>
     </button>
   </div>
-  <button class="nav__burger" id="burger" aria-label="Open menu">
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
+
+  <!-- Scroll progress: fill + ▲ marker + one tick per stage -->
+  <div class="progress" aria-hidden="true">
+    <div class="progress__track" id="progressTrack">
+      <div class="progress__fill" id="progressFill"></div>
+      <span class="progress__mark" id="progressMark">▲</span>
+    </div>
+    <span class="progress__stage" id="progressStage">00 / 06</span>
+  </div>
 </header>
 
+<main>
 <!-- ::: HERO ::: -->
 <section class="hero" id="hero">
   <!-- HUD frame -->
   <div class="hud" aria-hidden="true">
-    <span class="hud__tag hud__tag--tl">REC ● 01 / 05</span>
-    <span class="hud__tag hud__tag--tr">SECTOR · BAGHDAD-09</span>
+    <span class="hud__tag hud__tag--tl">REC ● 00 / 06</span>
+    <span class="hud__tag hud__tag--tr">φ = 1.618 · BAGHDAD-09</span>
     <span class="hud__tag hud__tag--bl">CHANNEL .ƒ — MORNM</span>
     <span class="hud__tag hud__tag--br" id="hudClock">--:--:--</span>
     <span class="hud__cross hud__cross--tl"></span>
@@ -118,11 +151,26 @@
   </div>
 
   <div class="hero__inner">
+    <!-- Golden spiral: its first square edge sits exactly on the 61.8% column split -->
+    <svg class="hero__spiral" viewBox="0 0 1618 1000" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <g class="hero__spiral-grid">
+        <rect x="0.5" y="0.5" width="1617" height="999"/>
+        <line x1="1000" y1="0" x2="1000" y2="1000"/>
+        <line x1="1000" y1="618" x2="1618" y2="618"/>
+        <line x1="1236" y1="618" x2="1236" y2="1000"/>
+        <line x1="1000" y1="764" x2="1236" y2="764"/>
+        <line x1="1146" y1="618" x2="1146" y2="764"/>
+        <line x1="1146" y1="708" x2="1236" y2="708"/>
+        <line x1="1180" y1="708" x2="1180" y2="764"/>
+      </g>
+      <path class="hero__spiral-path" d="M0 1000 A1000 1000 0 0 1 1000 0 A618 618 0 0 1 1618 618 A382 382 0 0 1 1236 1000 A236 236 0 0 1 1000 764 A146 146 0 0 1 1146 618 A90 90 0 0 1 1236 708 A56 56 0 0 1 1180 764 A34 34 0 0 1 1146 730 A22 22 0 0 1 1168 708 A12 12 0 0 1 1180 720"/>
+    </svg>
+
     <div class="hero__left">
       <div class="hero__meta reveal">
         <span class="dot"></span>
-        <span data-i18n-en="Portfolio · Volume 02" data-i18n-ar="معرض الأعمال · المجلّد الثاني">Portfolio · Volume 02</span>
-        <em class="hero__meta-jp">第二巻</em>
+        <span data-i18n-en="Portfolio · Volume 03" data-i18n-ar="معرض الأعمال · المجلّد الثالث">Portfolio · Volume 03</span>
+        <em class="hero__meta-jp">第三巻</em>
       </div>
 
       <h1 class="hero__title">
@@ -132,20 +180,20 @@
       </h1>
 
       <p class="hero__role reveal" data-delay="0.55"
-         data-i18n-en="Multimedia Designer <span class='sep'>/</span> Video Editor <span class='sep'>/</span> programmer"
-         data-i18n-ar="مصمم وسائط <span class='sep'>/</span> مونتير فيديو <span class='sep'>/</span> صانع إطارات">
-        Multimedia Designer <span class="sep">/</span> Video Editor <span class="sep">/</span> programmer
+         data-i18n-en="Multimedia Designer <span class='sep'>/</span> Video Editor <span class='sep'>/</span> Programmer"
+         data-i18n-ar="مصمم وسائط متعددة <span class='sep'>/</span> مونتير فيديو <span class='sep'>/</span> مبرمج">
+        Multimedia Designer <span class="sep">/</span> Video Editor <span class="sep">/</span> Programmer
       </p>
 
       <p class="hero__tagline reveal" data-delay="0.7"
-         data-i18n-en="Building cinematic stories through motion, code, and frame. I treat every project like an opening sequence — sharp, deliberate, alive."
-         data-i18n-ar="أبني حكايات سينمائية عبر الموشن والكود والإطار. أتعامل مع كل مشروع كأنه افتتاحية فيلم — حادّ، مدروس، ينبض بالحياة.">
-        Building cinematic stories through motion, code, and frame.
-        I treat every project like an opening sequence — sharp, deliberate, alive.
+         data-i18n-en="Building cinematic stories through motion, code, and frame. Campaigns for brands like Mytime and Clving — every project treated like an opening sequence."
+         data-i18n-ar="أصنع حكايات سينمائية بالحركة والكود والإطار. حملات لعلامات مثل Mytime و Clving — وكل مشروع أتعامل معه كأنه افتتاحية فيلم.">
+        Building cinematic stories through motion, code, and frame. Campaigns for brands like
+        Mytime and Clving — every project treated like an opening sequence.
       </p>
 
       <div class="hero__cta reveal" data-delay="0.85">
-        <a href="#projects" class="btn btn--primary" data-sfx="click">
+        <a href="#work" class="btn btn--primary" data-sfx="click">
           <span class="btn__label" data-i18n-en="View Work" data-i18n-ar="شاهد الأعمال">View Work</span>
           <span class="btn__arrow">→</span>
         </a>
@@ -157,141 +205,332 @@
 
       <div class="hero__stats reveal" data-delay="1.0">
         <div class="stat">
-          <span class="stat__num">09<em>+</em></span>
-          <span class="stat__label" data-i18n-en="Tools in the kit" data-i18n-ar="أدوات بل صندوق">Tools in the kit</span>
+          <span class="stat__num">36</span>
+          <span class="stat__label" data-i18n-en="Selected works" data-i18n-ar="عمل مختار">Selected works</span>
         </div>
         <div class="stat">
-          <span class="stat__num">20<em>+</em></span>
-          <span class="stat__label" data-i18n-en="Posters in archive" data-i18n-ar="بوسترات بل أرشيف">Posters in archive</span>
+          <span class="stat__num">03</span>
+          <span class="stat__label" data-i18n-en="Printed roll-ups" data-i18n-ar="رول أب مطبوع">Printed roll-ups</span>
         </div>
         <div class="stat">
           <span class="stat__num">07<em>+</em></span>
-          <span class="stat__label" data-i18n-en="Years on this craft" data-i18n-ar="سنوات على الطريق">Years on this craft</span>
+          <span class="stat__label" data-i18n-en="Years on this craft" data-i18n-ar="سنوات في المجال">Years on this craft</span>
         </div>
       </div>
     </div>
 
-    <!-- Profile panel -->
+    <!-- Member card: golden rectangle (1 : 1.618), tilts + flips -->
     <div class="hero__right reveal" data-delay="0.4">
-      <div class="portrait">
-        <div class="portrait__frame">
-          <div class="portrait__bg"></div>
-          <div class="portrait__figure" aria-hidden="true">
-            <img class="portrait__photo"
-                 src="assets/profile-480.jpg"
-                 srcset="assets/profile-480.jpg 480w, assets/profile.jpg 780w"
-                 sizes="(max-width: 600px) 280px, 380px"
-                 data-fullsrc="assets/profile.jpg"
-                 alt=""
-                 fetchpriority="high"
-                 decoding="async" />
-            <div class="portrait__duotone"></div>
-            <svg class="portrait__hud-svg" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <pattern id="lines" width="3" height="3" patternUnits="userSpaceOnUse">
-                  <path d="M0 0 L3 3" stroke="#F39200" stroke-opacity="0.22" stroke-width="0.4"/>
-                </pattern>
-              </defs>
-              <rect width="320" height="420" fill="url(#lines)" opacity="0.7"/>
-              <line x1="0" y1="80"  x2="320" y2="80"  stroke="#F39200" stroke-opacity="0.18" stroke-dasharray="2 4"/>
-              <line x1="0" y1="340" x2="320" y2="340" stroke="#F39200" stroke-opacity="0.18" stroke-dasharray="2 4"/>
-              <line x1="60"  y1="0" x2="60"  y2="420" stroke="#FFFFFF" stroke-opacity="0.05"/>
-              <line x1="260" y1="0" x2="260" y2="420" stroke="#FFFFFF" stroke-opacity="0.05"/>
-              <text x="20" y="40"  font-family="JetBrains Mono, monospace" font-size="10" fill="#F39200" opacity="0.9">ID · 0042</text>
-              <text x="20" y="54"  font-family="JetBrains Mono, monospace" font-size="9"  fill="#FFFFFF" opacity="0.55">MORNM / SUBJECT</text>
-              <text x="232" y="40" font-family="JetBrains Mono, monospace" font-size="10" fill="#F39200" opacity="0.9">ƒ 1.4</text>
-              <text x="232" y="400" font-family="JetBrains Mono, monospace" font-size="9" fill="#FFFFFF" opacity="0.55">SCAN · OK</text>
-              <text x="20" y="400" font-family="JetBrains Mono, monospace" font-size="9"  fill="#FFFFFF" opacity="0.55">PORTRAIT // 紋</text>
-            </svg>
-          </div>
-          <div class="portrait__scan"></div>
+      <div class="idcard" id="idcard" tabindex="0" role="button" aria-pressed="false"
+           aria-label="Member card — press to flip" data-sfx-target>
+        <div class="idcard__inner">
 
-          <div class="portrait__corner portrait__corner--tl"></div>
-          <div class="portrait__corner portrait__corner--tr"></div>
-          <div class="portrait__corner portrait__corner--bl"></div>
-          <div class="portrait__corner portrait__corner--br"></div>
+          <!-- FRONT -->
+          <div class="idcard__face idcard__face--front">
+            <div class="portrait__bg"></div>
+            <div class="portrait__figure" aria-hidden="true">
+              <img class="portrait__photo"
+                   src="assets/profile-480.jpg"
+                   srcset="assets/profile-480.jpg 480w, assets/profile.jpg 780w"
+                   sizes="(max-width: 600px) 280px, 377px"
+                   data-fullsrc="assets/profile.jpg"
+                   alt=""
+                   fetchpriority="high"
+                   decoding="async" />
+              <div class="portrait__duotone"></div>
+              <svg class="portrait__hud-svg" viewBox="0 0 377 610" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <pattern id="lines" width="3" height="3" patternUnits="userSpaceOnUse">
+                    <path d="M0 0 L3 3" stroke="#F39200" stroke-opacity="0.2" stroke-width="0.4"/>
+                  </pattern>
+                </defs>
+                <rect width="377" height="610" fill="url(#lines)" opacity="0.6"/>
+                <line x1="0" y1="233" x2="377" y2="233" stroke="#F39200" stroke-opacity="0.18" stroke-dasharray="2 4"/>
+                <line x1="144" y1="0" x2="144" y2="610" stroke="#FFFFFF" stroke-opacity="0.05"/>
+              </svg>
+            </div>
+            <div class="portrait__scan"></div>
+            <div class="idcard__holo" aria-hidden="true"></div>
 
-          <div class="portrait__tag">
-            <div class="portrait__tag-row">
-              <span>名前</span><strong data-i18n-en="MURTADHA M." data-i18n-ar="مرتضى م.">MURTADHA M.</strong>
+            <div class="idcard__top">
+              <span data-i18n-en="MEMBER CARD" data-i18n-ar="بطاقة عضوية">MEMBER CARD</span>
+              <span class="idcard__no">No. 0042</span>
             </div>
-            <div class="portrait__tag-row">
-              <span>分野</span><strong data-i18n-en="MOTION / DESIGN" data-i18n-ar="موشن / تصميم">MOTION / DESIGN</strong>
-            </div>
-            <div class="portrait__tag-row">
-              <span>状態</span><strong class="ok" data-i18n-en="ONLINE" data-i18n-ar="متصل">ONLINE</strong>
+
+            <div class="portrait__corner portrait__corner--tl"></div>
+            <div class="portrait__corner portrait__corner--tr"></div>
+            <div class="portrait__corner portrait__corner--bl"></div>
+            <div class="portrait__corner portrait__corner--br"></div>
+
+            <div class="portrait__tag">
+              <div class="portrait__tag-row">
+                <span>名前</span><strong data-i18n-en="MURTADHA M." data-i18n-ar="مرتضى م.">MURTADHA M.</strong>
+              </div>
+              <div class="portrait__tag-row">
+                <span>分野</span><strong data-i18n-en="MOTION / DESIGN" data-i18n-ar="موشن / تصميم">MOTION / DESIGN</strong>
+              </div>
+              <div class="portrait__tag-row">
+                <span>状態</span><strong class="ok" data-i18n-en="ONLINE" data-i18n-ar="متصل">ONLINE</strong>
+              </div>
             </div>
           </div>
+
+          <!-- BACK -->
+          <div class="idcard__face idcard__face--back">
+            <div class="idcard__top">
+              <span data-i18n-en="MEMBER DATA" data-i18n-ar="بيانات العضو">MEMBER DATA</span>
+              <span class="idcard__no">No. 0042</span>
+            </div>
+            <div class="idcard__kanji" aria-hidden="true">紋</div>
+            <dl class="idcard__data">
+              <div><dt data-i18n-en="Name" data-i18n-ar="الاسم">Name</dt>
+                   <dd data-i18n-en="Murtadha Muayad Majid" data-i18n-ar="مرتضى مؤيد مجيد">Murtadha Muayad Majid</dd></div>
+              <div><dt data-i18n-en="Alias" data-i18n-ar="اللقب">Alias</dt><dd>MORNM · 紋</dd></div>
+              <div><dt data-i18n-en="Role" data-i18n-ar="المجال">Role</dt>
+                   <dd data-i18n-en="Multimedia designer" data-i18n-ar="مصمم وسائط متعددة">Multimedia designer</dd></div>
+              <div><dt data-i18n-en="Base" data-i18n-ar="المدينة">Base</dt>
+                   <dd data-i18n-en="Baghdad, Iraq" data-i18n-ar="بغداد، العراق">Baghdad, Iraq</dd></div>
+              <div><dt data-i18n-en="Clients" data-i18n-ar="العملاء">Clients</dt><dd>Mytime · Clving · Elaka</dd></div>
+              <div><dt data-i18n-en="Main tools" data-i18n-ar="الأدوات">Main tools</dt><dd>Ps · Ai · Ae · Pr</dd></div>
+              <div><dt data-i18n-en="Status" data-i18n-ar="الحالة">Status</dt>
+                   <dd class="ok" data-i18n-en="Open for work" data-i18n-ar="متاح للعمل">Open for work</dd></div>
+            </dl>
+            <div class="idcard__barcode" aria-hidden="true"></div>
+            <div class="idcard__sign">MORNM — φ 1.618</div>
+          </div>
+
         </div>
-
-        <div class="portrait__kanji" aria-hidden="true">紋</div>
       </div>
+      <p class="idcard__hint" data-i18n-en="Move over the card · press to flip" data-i18n-ar="حرّك الماوس فوق الكارت · اضغط لتقلبه">Move over the card · press to flip</p>
     </div>
   </div>
 
-  <a class="hero__scroll" href="#about" data-sfx="click" aria-label="Scroll to about">
+  <a class="hero__scroll" href="#work" data-sfx="click" aria-label="Scroll to work">
     <span class="hero__scroll-line"></span>
-    <span class="hero__scroll-text" data-i18n-en="SCROLL — 下へ" data-i18n-ar="انزل — 下へ">SCROLL — 下へ</span>
+    <span class="hero__scroll-text" data-i18n-en="SCROLL — 下へ" data-i18n-ar="مرّر للأسفل — 下へ">SCROLL — 下へ</span>
   </a>
 </section>
 
-<!-- ::: ABOUT ::: -->
-<section class="section section--about" id="about">
+<!-- ::: WORK — film reel ::: -->
+<section class="section section--work" id="work" data-stage="1">
   <header class="section__head">
-    <span class="section__no">— 01</span>
+    <span class="section__no">STAGE 01 / 06</span>
+    <h2 class="section__title"><span data-i18n-en="Selected Work" data-i18n-ar="أعمال مختارة">Selected Work</span> <em>作品</em></h2>
+    <span class="section__line"></span>
+  </header>
+
+  <p class="section__lead reveal-up"
+     data-i18n-en="Every work is an episode — campaigns, print and posters. Pick an episode from the strip, use the arrows, or jump to the next-episode preview."
+     data-i18n-ar="كل عمل حلقة — حملات ومطبوعات وبوسترات. اختر حلقة من الشريط، أو استخدم الأسهم، أو انتقل من معاينة الحلقة القادمة.">
+    Every work is an episode — campaigns, print and posters. Pick an episode from the strip, use the arrows, or jump to the next-episode preview.
+  </p>
+
+  <div class="reel reveal-up" id="reel">
+    <div class="reel__filters" role="toolbar" aria-label="Filter works">
+      <button class="reel__chip is-active" type="button" data-filter="post" aria-pressed="true" data-sfx="click">
+        <i>投稿</i><span data-i18n-en="POSTS" data-i18n-ar="بوستات">POSTS</span> <em data-count="post">00</em>
+      </button>
+      <button class="reel__chip" type="button" data-filter="surreal" aria-pressed="false" data-sfx="click">
+        <i>超現実</i><span data-i18n-en="SURREAL" data-i18n-ar="سريالي">SURREAL</span> <em data-count="surreal">00</em>
+      </button>
+      <button class="reel__chip" type="button" data-filter="rollup" aria-pressed="false" data-sfx="click">
+        <i>ロールアップ</i><span data-i18n-en="ROLL-UPS" data-i18n-ar="رول أب">ROLL-UPS</span> <em data-count="rollup">00</em>
+      </button>
+    </div>
+
+    <div class="reel__stage">
+      <button class="reel__screen" type="button" id="reelScreen" aria-label="View full size">
+        <span class="reel__backdrop" id="reelBackdrop" aria-hidden="true"></span>
+        <!-- manga focus lines (集中線) + halftone behind the episode -->
+        <span class="reel__lines" aria-hidden="true"></span>
+        <span class="reel__halftone" aria-hidden="true"></span>
+        <span class="reel__ep-big" id="reelEpBig" aria-hidden="true">01</span>
+        <img class="reel__img" id="reelImg" alt="" decoding="async" />
+        <span class="reel__hud reel__hud--tl" aria-hidden="true">● ON AIR</span>
+        <span class="reel__hud reel__hud--br" aria-hidden="true">⤢</span>
+        <!-- eyecatch wipe between episodes -->
+        <span class="reel__wipe" aria-hidden="true"><i></i><i></i><i></i><b id="reelWipeText">第一話</b></span>
+      </button>
+
+      <aside class="reel__info" id="reelInfo" aria-live="polite">
+        <div class="reel__ep">
+          <span class="reel__ep-label"><span data-i18n-en="EPISODE" data-i18n-ar="الحلقة">EPISODE</span> <b id="reelEpNo">01</b></span>
+          <span class="reel__ep-jp" id="reelEpJp">第一話</span>
+        </div>
+        <div class="reel__meta">
+          <span class="reel__client" id="reelClient">Mytime</span>
+          <span class="reel__cat" id="reelCat">CAMPAIGN</span>
+        </div>
+        <h3 class="reel__title" id="reelTitle">—</h3>
+        <p class="reel__desc" id="reelDesc"></p>
+
+        <button class="reel__next-ep" type="button" id="reelNextEp" data-sfx="click">
+          <span class="reel__next-head">
+            <em>次回予告</em>
+            <span data-i18n-en="Next episode" data-i18n-ar="الحلقة القادمة">Next episode</span>
+          </span>
+          <span class="reel__next-body">
+            <img id="reelNextImg" alt="" decoding="async" />
+            <span class="reel__next-text">
+              <span class="reel__next-no" id="reelNextNo">EP.02</span>
+              <span class="reel__next-title" id="reelNextTitle">—</span>
+            </span>
+            <span class="reel__next-arrow" aria-hidden="true">▶</span>
+          </span>
+        </button>
+
+        <div class="reel__controls">
+          <button class="reel__nav reel__nav--prev" type="button" id="reelPrev" aria-label="Previous work" data-sfx="click">‹</button>
+          <span class="reel__count" id="reelCount">01 / 32</span>
+          <button class="reel__nav reel__nav--next" type="button" id="reelNext" aria-label="Next work" data-sfx="click">›</button>
+        </div>
+        <button class="btn reel__zoom" type="button" id="reelZoom" data-sfx="click">
+          <span class="btn__label" data-i18n-en="View full size" data-i18n-ar="عرض بالحجم الكامل">View full size</span>
+          <span class="btn__arrow">⤢</span>
+        </button>
+      </aside>
+    </div>
+
+    <div class="reel__strip" id="reelStrip">
+      <ol class="reel__track" id="reelTrack" role="listbox" aria-label="Works"></ol>
+    </div>
+  </div>
+
+  <div class="reel__more reveal-up">
+    <a class="btn btn--primary" href="posters.html" data-sfx="click">
+      <span class="btn__label" data-i18n-en="Open Full Archive" data-i18n-ar="افتح الأرشيف الكامل">Open Full Archive</span>
+      <span class="btn__arrow">→</span>
+    </a>
+    <span class="reel__note" data-i18n-en="All 36 episodes in one gallery" data-i18n-ar="كل الحلقات الـ36 في معرض واحد">All 36 episodes in one gallery</span>
+  </div>
+</section>
+
+<!-- ::: IDENTITIES — logo showcase ::: -->
+<section class="section section--logos" id="logos" data-stage="2">
+  <header class="section__head">
+    <span class="section__no">STAGE 02 / 06</span>
+    <h2 class="section__title"><span data-i18n-en="Identities" data-i18n-ar="الهويات">Identities</span> <em>標章</em></h2>
+    <span class="section__line"></span>
+  </header>
+
+  <p class="section__lead reveal-up"
+     data-i18n-en="Logos and visual identities — marks built to be remembered. Pick a logo to put it on the stage, then switch the stage between black and white."
+     data-i18n-ar="شعارات وهويات بصرية — علامات مصممة لتبقى في الذاكرة. اختر شعارًا ليظهر على المنصة، وبدّل المنصة بين الأسود والأبيض.">
+    Logos and visual identities — marks built to be remembered. Pick a logo to put it on the stage, then switch the stage between black and white.
+  </p>
+
+  <!-- marquee: every logo, slowly sliding; pressing one puts it on the stage -->
+  <div class="logos reveal-up">
+    <div class="logos__marquee">
+      <div class="logos__track" id="logoTrack"></div>
+    </div>
+  </div>
+
+  <div class="marks reveal-up" id="marks">
+    <div class="marks__stage">
+      <div class="marks__canvas" id="marksCanvas">
+        <!-- construction grid: golden circles (r, r/φ, r/φ²) and axes, redrawn on every change -->
+        <svg class="marks__grid" viewBox="0 0 1618 1000" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <line x1="0" y1="500" x2="1618" y2="500"/>
+          <line x1="809" y1="0" x2="809" y2="1000"/>
+          <line x1="309" y1="0" x2="309" y2="1000"/>
+          <line x1="1309" y1="0" x2="1309" y2="1000"/>
+          <circle class="marks__ring" cx="809" cy="500" r="420"/>
+          <circle cx="809" cy="500" r="260"/>
+          <circle cx="809" cy="500" r="160"/>
+          <rect x="389" y="80" width="840" height="840"/>
+        </svg>
+        <img class="marks__img" id="marksImg" alt="" decoding="async" />
+        <span class="marks__tag marks__tag--tl" id="marksNo">MARK 01 / 06</span>
+        <span class="marks__tag marks__tag--tr">1 : 1.618</span>
+        <span class="marks__tag marks__tag--bl" id="marksMode">MONO · WHITE</span>
+        <span class="marks__corner marks__corner--tl" aria-hidden="true"></span>
+        <span class="marks__corner marks__corner--tr" aria-hidden="true"></span>
+        <span class="marks__corner marks__corner--bl" aria-hidden="true"></span>
+        <span class="marks__corner marks__corner--br" aria-hidden="true"></span>
+      </div>
+      <div class="marks__tools" role="group" aria-label="Stage colour">
+        <button class="marks__tool is-active" type="button" data-bg="dark" aria-pressed="true" data-sfx="click">
+          <i class="marks__swatch marks__swatch--dark"></i><span data-i18n-en="Black" data-i18n-ar="أسود">Black</span>
+        </button>
+        <button class="marks__tool" type="button" data-bg="light" aria-pressed="false" data-sfx="click">
+          <i class="marks__swatch marks__swatch--light"></i><span data-i18n-en="White" data-i18n-ar="أبيض">White</span>
+        </button>
+      </div>
+    </div>
+
+    <aside class="marks__info" aria-live="polite">
+      <div class="marks__kicker"><span class="marks__no" id="marksIndex">01</span><em>標章</em></div>
+      <h3 class="marks__name" id="marksName">—</h3>
+      <div class="marks__type" id="marksType"></div>
+      <dl class="marks__facts">
+        <div><dt data-i18n-en="Client" data-i18n-ar="الجهة">Client</dt><dd id="marksAbout"></dd></div>
+        <div><dt data-i18n-en="Idea" data-i18n-ar="الفكرة">Idea</dt><dd id="marksIdea"></dd></div>
+      </dl>
+      <ol class="marks__list" id="marksList" aria-label="Logos"></ol>
+    </aside>
+  </div>
+</section>
+
+<!-- ::: ABOUT ::: -->
+<section class="section section--about" id="about" data-stage="3">
+  <header class="section__head">
+    <span class="section__no">STAGE 03 / 06</span>
     <h2 class="section__title"><span data-i18n-en="About" data-i18n-ar="عني">About</span> <em>自己紹介</em></h2>
     <span class="section__line"></span>
   </header>
 
-  <div class="about__grid">
-    <article class="about__card glass reveal-up">
+  <div class="about">
+    <article class="about__main glass reveal-up">
       <div class="about__card-no">// 001</div>
       <h3 class="about__card-title"
           data-i18n-en="Hi — I'm Murtadha."
-          data-i18n-ar="هلا — اسمي مرتضى.">Hi — I'm Murtadha.</h3>
-      <p data-i18n-en="A student of multimedia from Baghdad. I design posters, cut videos, and slowly poke around code. Nothing fancy — I just like making things look nice."
-         data-i18n-ar="طالب وسائط متعددة من بغداد. أصمم بوسترات، أعدل فيديوات، وأجرب الكود على راحتي. ما عندي شي خارق — بس أحب أخلي الأشياء تطلع حلوة.">
-        A student of multimedia from Baghdad. I design posters, cut videos, and slowly poke around code.
+          data-i18n-ar="مرحبًا — أنا مرتضى.">Hi — I'm Murtadha.</h3>
+      <p data-i18n-en="A student of multimedia from Baghdad. I design posters and campaigns, cut videos, and slowly poke around code. Nothing fancy — I just like making things look nice."
+         data-i18n-ar="طالب وسائط متعددة من بغداد. أصمم البوسترات والحملات، وأعمل مونتاج الفيديو، وأستكشف البرمجة على مهل. لا شيء خارق — فقط أحب أن تبدو الأشياء جميلة.">
+        A student of multimedia from Baghdad. I design posters and campaigns, cut videos, and slowly poke around code.
         Nothing fancy — I just like making things look nice.
       </p>
-      <p data-i18n-en="I grew up on anime, and a lot of how I think about color, framing, and timing leaked in from those opening sequences I used to rewind too many times."
-         data-i18n-ar="كبرت أتابع أنمي، وأكثر تفكيري بالألوان والكادر والتوقيت دخلني من الإنتروهات اللي كنت أرجعها مرات هواية.">
-        I grew up on anime, and a lot of how I think about color, framing, and timing leaked in
-        from those opening sequences I used to rewind too many times.
-      </p>
     </article>
 
-    <article class="about__card about__card--quote glass reveal-up" data-delay="0.15">
-      <span class="quote-mark">「</span>
-      <p data-i18n-en="If a frame can stop someone for a second — it did its job."
-         data-i18n-ar="إذا الإطار قدر يوقّف واحد ثانية — يكون أدّى شغله.">
-        If a frame can stop someone for a second — it did its job.
-      </p>
-      <span class="quote-mark quote-mark--end">」</span>
-      <div class="about__card-sign">— MORNM</div>
-    </article>
+    <div class="about__side">
+      <!-- quote card: corners drawn with logical borders, so they flip with RTL and never sit on the text -->
+      <figure class="about__card about__card--quote glass reveal-up" data-delay="0.15">
+        <span class="quote-corner quote-corner--start" aria-hidden="true"></span>
+        <span class="quote-corner quote-corner--end" aria-hidden="true"></span>
+        <blockquote>
+          <p data-i18n-en="People live their lives bound by what they accept as correct and true. That's how they define reality."
+             data-i18n-ar="يعيش الناس حياتهم مقيّدين بما يقبلونه على أنه صحيح وحقيقي. هكذا يعرّفون الواقع.">
+            People live their lives bound by what they accept as correct and true. That's how they define reality.
+          </p>
+        </blockquote>
+        <figcaption class="about__card-sign">
+          <span data-i18n-en="— Itachi Uchiha" data-i18n-ar="— إيتاتشي أوتشيها">— Itachi Uchiha</span>
+          <em>うちはイタチ</em>
+        </figcaption>
+      </figure>
 
-    <article class="about__card about__card--tags glass reveal-up" data-delay="0.3">
-      <div class="about__card-no">// 002</div>
-      <h3 class="about__card-title"
-          data-i18n-en="What I'm into"
-          data-i18n-ar="شنو يعجبني">What I'm into</h3>
-      <div class="chips">
-        <span class="chip" data-i18n-en="Anime openings"  data-i18n-ar="إنتروهات أنمي">Anime openings</span>
-        <span class="chip" data-i18n-en="Poster design"   data-i18n-ar="تصميم بوسترات">Poster design</span>
-        <span class="chip" data-i18n-en="Video editing"   data-i18n-ar="مونتاج فيديو">Video editing</span>
-        <span class="chip" data-i18n-en="Black + orange"  data-i18n-ar="أسود + برتقالي">Black + orange</span>
-        <span class="chip" data-i18n-en="Late nights"     data-i18n-ar="سهرات ليل">Late nights</span>
-        <span class="chip" data-i18n-en="Cyberpunk vibes" data-i18n-ar="أجواء سايبربانك">Cyberpunk vibes</span>
-      </div>
-    </article>
+      <article class="about__card about__card--tags glass reveal-up" data-delay="0.3">
+        <div class="about__card-no">// 002</div>
+        <h3 class="about__card-title"
+            data-i18n-en="What I'm into"
+            data-i18n-ar="اهتماماتي">What I'm into</h3>
+        <div class="chips">
+          <span class="chip" data-i18n-en="Design"      data-i18n-ar="التصميم">Design</span>
+          <span class="chip" data-i18n-en="Video"       data-i18n-ar="الفيديو">Video</span>
+          <span class="chip" data-i18n-en="Music"       data-i18n-ar="الموسيقى">Music</span>
+          <span class="chip" data-i18n-en="Programming" data-i18n-ar="البرمجة">Programming</span>
+          <span class="chip">3D</span>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
 <!-- ::: SKILLS ::: -->
-<section class="section section--skills" id="skills">
+<section class="section section--skills" id="skills" data-stage="4">
   <header class="section__head">
-    <span class="section__no">— 02</span>
+    <span class="section__no">STAGE 04 / 06</span>
     <h2 class="section__title"><span data-i18n-en="Skills" data-i18n-ar="المهارات">Skills</span> <em>技能</em></h2>
     <span class="section__line"></span>
   </header>
@@ -302,12 +541,12 @@
       <div class="skill__inner">
         <div class="skill__head">
           <span class="skill__no">01</span>
-          <span class="skill__cat" data-i18n-en="Markup" data-i18n-ar="ترميز">Markup</span>
+          <span class="skill__cat" data-i18n-en="Image" data-i18n-ar="صورة">Image</span>
         </div>
-        <h3 class="skill__name">HTML</h3>
-        <div class="skill__jp">構造</div>
-        <div class="skill__bar"><span style="--lvl:80%"></span></div>
-        <div class="skill__meta"><span>80 / 100</span><span data-i18n-en="★ Solid"     data-i18n-ar="★ متين">★ Solid</span></div>
+        <h3 class="skill__name">Photoshop</h3>
+        <div class="skill__jp">画像</div>
+        <div class="skill__bar"><span style="--lvl:70%"></span></div>
+        <div class="skill__meta"><span>70 / 100</span><span data-i18n-en="★ Fluent" data-i18n-ar="★ متقدّم">★ Fluent</span></div>
       </div>
     </article>
 
@@ -315,12 +554,12 @@
       <div class="skill__inner">
         <div class="skill__head">
           <span class="skill__no">02</span>
-          <span class="skill__cat" data-i18n-en="Style" data-i18n-ar="تنسيق">Style</span>
+          <span class="skill__cat" data-i18n-en="Vector" data-i18n-ar="فيكتور">Vector</span>
         </div>
-        <h3 class="skill__name">CSS</h3>
-        <div class="skill__jp">装飾</div>
-        <div class="skill__bar"><span style="--lvl:60%"></span></div>
-        <div class="skill__meta"><span>60 / 100</span><span data-i18n-en="★ Comfortable" data-i18n-ar="★ مرتاح">★ Comfortable</span></div>
+        <h3 class="skill__name">Illustrator</h3>
+        <div class="skill__jp">図形</div>
+        <div class="skill__bar"><span style="--lvl:70%"></span></div>
+        <div class="skill__meta"><span>70 / 100</span><span data-i18n-en="★ Fluent" data-i18n-ar="★ متقدّم">★ Fluent</span></div>
       </div>
     </article>
 
@@ -328,6 +567,58 @@
       <div class="skill__inner">
         <div class="skill__head">
           <span class="skill__no">03</span>
+          <span class="skill__cat" data-i18n-en="Motion" data-i18n-ar="موشن">Motion</span>
+        </div>
+        <h3 class="skill__name">After Effects</h3>
+        <div class="skill__jp">動画</div>
+        <div class="skill__bar"><span style="--lvl:60%"></span></div>
+        <div class="skill__meta"><span>60 / 100</span><span data-i18n-en="★ Comfortable" data-i18n-ar="★ جيد">★ Comfortable</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.15" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">04</span>
+          <span class="skill__cat" data-i18n-en="Edit" data-i18n-ar="مونتاج">Edit</span>
+        </div>
+        <h3 class="skill__name">Premiere</h3>
+        <div class="skill__jp">編集</div>
+        <div class="skill__bar"><span style="--lvl:60%"></span></div>
+        <div class="skill__meta"><span>60 / 100</span><span data-i18n-en="★ Comfortable" data-i18n-ar="★ جيد">★ Comfortable</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.20" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">05</span>
+          <span class="skill__cat" data-i18n-en="Markup" data-i18n-ar="ترميز">Markup</span>
+        </div>
+        <h3 class="skill__name">HTML</h3>
+        <div class="skill__jp">構造</div>
+        <div class="skill__bar"><span style="--lvl:70%"></span></div>
+        <div class="skill__meta"><span>70 / 100</span><span data-i18n-en="★ Fluent" data-i18n-ar="★ متقدّم">★ Fluent</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.25" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">06</span>
+          <span class="skill__cat" data-i18n-en="Style" data-i18n-ar="تنسيق">Style</span>
+        </div>
+        <h3 class="skill__name">CSS</h3>
+        <div class="skill__jp">装飾</div>
+        <div class="skill__bar"><span style="--lvl:60%"></span></div>
+        <div class="skill__meta"><span>60 / 100</span><span data-i18n-en="★ Comfortable" data-i18n-ar="★ جيد">★ Comfortable</span></div>
+      </div>
+    </article>
+
+    <article class="skill reveal-up" data-delay="0.30" data-sfx-target>
+      <div class="skill__inner">
+        <div class="skill__head">
+          <span class="skill__no">07</span>
           <span class="skill__cat" data-i18n-en="Logic" data-i18n-ar="منطق">Logic</span>
         </div>
         <h3 class="skill__name">JavaScript</h3>
@@ -337,68 +628,16 @@
       </div>
     </article>
 
-    <article class="skill reveal-up" data-delay="0.15" data-sfx-target>
-      <div class="skill__inner">
-        <div class="skill__head">
-          <span class="skill__no">04</span>
-          <span class="skill__cat" data-i18n-en="Motion" data-i18n-ar="موشن">Motion</span>
-        </div>
-        <h3 class="skill__name">After Effects</h3>
-        <div class="skill__jp">動画</div>
-        <div class="skill__bar"><span style="--lvl:70%"></span></div>
-        <div class="skill__meta"><span>70 / 100</span><span data-i18n-en="★ Fluent" data-i18n-ar="★ طليق">★ Fluent</span></div>
-      </div>
-    </article>
-
-    <article class="skill reveal-up" data-delay="0.20" data-sfx-target>
-      <div class="skill__inner">
-        <div class="skill__head">
-          <span class="skill__no">05</span>
-          <span class="skill__cat" data-i18n-en="Image" data-i18n-ar="صورة">Image</span>
-        </div>
-        <h3 class="skill__name">Photoshop</h3>
-        <div class="skill__jp">画像</div>
-        <div class="skill__bar"><span style="--lvl:90%"></span></div>
-        <div class="skill__meta"><span>90 / 100</span><span data-i18n-en="★ Native" data-i18n-ar="★ أصلي">★ Native</span></div>
-      </div>
-    </article>
-
-    <article class="skill reveal-up" data-delay="0.25" data-sfx-target>
-      <div class="skill__inner">
-        <div class="skill__head">
-          <span class="skill__no">06</span>
-          <span class="skill__cat" data-i18n-en="Vector" data-i18n-ar="فيكتور">Vector</span>
-        </div>
-        <h3 class="skill__name">Illustrator</h3>
-        <div class="skill__jp">図形</div>
-        <div class="skill__bar"><span style="--lvl:70%"></span></div>
-        <div class="skill__meta"><span>70 / 100</span><span data-i18n-en="★ Fluent" data-i18n-ar="★ طليق">★ Fluent</span></div>
-      </div>
-    </article>
-
-    <article class="skill reveal-up" data-delay="0.30" data-sfx-target>
-      <div class="skill__inner">
-        <div class="skill__head">
-          <span class="skill__no">07</span>
-          <span class="skill__cat" data-i18n-en="Edit" data-i18n-ar="مونتاج">Edit</span>
-        </div>
-        <h3 class="skill__name">Premiere</h3>
-        <div class="skill__jp">編集</div>
-        <div class="skill__bar"><span style="--lvl:60%"></span></div>
-        <div class="skill__meta"><span>60 / 100</span><span data-i18n-en="★ Comfortable" data-i18n-ar="★ مرتاح">★ Comfortable</span></div>
-      </div>
-    </article>
-
     <article class="skill reveal-up" data-delay="0.35" data-sfx-target>
       <div class="skill__inner">
         <div class="skill__head">
           <span class="skill__no">08</span>
           <span class="skill__cat" data-i18n-en="Systems" data-i18n-ar="أنظمة">Systems</span>
         </div>
-        <h3 class="skill__name">C++</h3>
+        <h3 class="skill__name"><bdi>C++</bdi></h3>
         <div class="skill__jp">基盤</div>
         <div class="skill__bar"><span style="--lvl:40%"></span></div>
-        <div class="skill__meta"><span>40 / 100</span><span data-i18n-en="★ Building" data-i18n-ar="★ أبني">★ Building</span></div>
+        <div class="skill__meta"><span>40 / 100</span><span data-i18n-en="★ Building" data-i18n-ar="★ قيد التطوير">★ Building</span></div>
       </div>
     </article>
 
@@ -406,125 +645,49 @@
       <div class="skill__inner">
         <div class="skill__head">
           <span class="skill__no">09</span>
-          <span class="skill__cat" data-i18n-en="3D" data-i18n-ar="ثلاثي">3D</span>
+          <span class="skill__cat" data-i18n-en="3D" data-i18n-ar="ثلاثي الأبعاد">3D</span>
         </div>
         <h3 class="skill__name">Blender</h3>
         <div class="skill__jp">立体</div>
         <div class="skill__bar"><span style="--lvl:30%"></span></div>
-        <div class="skill__meta"><span>30 / 100</span><span data-i18n-en="★ Sketching" data-i18n-ar="★ أتلمّس">★ Sketching</span></div>
+        <div class="skill__meta"><span>30 / 100</span><span data-i18n-en="★ Sketching" data-i18n-ar="★ مبتدئ">★ Sketching</span></div>
       </div>
     </article>
 
   </div>
 </section>
 
-<!-- ::: PROJECTS ::: -->
-<section class="section section--projects" id="projects">
-  <header class="section__head">
-    <span class="section__no">— 03</span>
-    <h2 class="section__title">
-      <span data-i18n-en="Showcase" data-i18n-ar="العرض">Showcase</span> <em>展示</em>
-    </h2>
-    <span class="section__line"></span>
-  </header>
-
-  <p class="section__lead reveal-up"
-     data-i18n-en="A rolling archive of posters, identities, and visual experiments. Click any frame to zoom in."
-     data-i18n-ar="أرشيف متجدّد من البوسترات والهويّات والتجارب البصرية. اضغط أي إطار للتكبير.">
-    A rolling archive of posters, identities, and visual experiments. Click any frame to zoom in.
-  </p>
-
-  <div class="gallery" id="gallery">
-    <figure class="card card--featured" data-sfx-target>
-      <img src="assets/posts/thumbs/p01.jpg"
-           data-fullsrc="assets/posts/thumbs/p01.jpg"
-           alt="MORNM poster — 01" loading="lazy" decoding="async" />
-      <figcaption class="card__cap">
-        <span class="card__tag" data-i18n-en="FEATURED · 主作" data-i18n-ar="مميز · 主作">FEATURED · 主作</span>
-        <span class="card__id">PRJ // 001</span>
-      </figcaption>
-    </figure>
-
-    <figure class="card" data-sfx-target>
-      <img src="assets/posts/thumbs/p02.jpg"
-           data-fullsrc="assets/posts/thumbs/p02.jpg"
-           alt="Poster — 02" loading="lazy" decoding="async" />
-      <figcaption class="card__cap"><span class="card__id">PRJ // 002</span></figcaption>
-    </figure>
-
-    <figure class="card" data-sfx-target>
-      <img src="assets/posts/thumbs/p03.jpg"
-           data-fullsrc="assets/posts/thumbs/p03.jpg"
-           alt="Poster — 03" loading="lazy" decoding="async" />
-      <figcaption class="card__cap"><span class="card__id">PRJ // 003</span></figcaption>
-    </figure>
-
-    <figure class="card" data-sfx-target>
-      <img src="assets/posts/thumbs/p04.jpg"
-           data-fullsrc="assets/posts/thumbs/p04.jpg"
-           alt="Poster — 04" loading="lazy" decoding="async" />
-      <figcaption class="card__cap"><span class="card__id">PRJ // 004</span></figcaption>
-    </figure>
-
-    <figure class="card" data-sfx-target>
-      <img src="assets/posts/thumbs/p05.jpg"
-           data-fullsrc="assets/posts/thumbs/p05.jpg"
-           alt="Poster — 05" loading="lazy" decoding="async" />
-      <figcaption class="card__cap"><span class="card__id">PRJ // 005</span></figcaption>
-    </figure>
-
-    <figure class="card" data-sfx-target>
-      <img src="assets/posts/thumbs/p06.jpg"
-           data-fullsrc="assets/posts/thumbs/p06.jpg"
-           alt="Poster — 06" loading="lazy" decoding="async" />
-      <figcaption class="card__cap"><span class="card__id">PRJ // 006</span></figcaption>
-    </figure>
-  </div>
-
-  <div class="gallery__more reveal-up">
-    <a class="btn btn--primary btn--more" href="posters.html" data-sfx="click">
-      <span class="btn__label"
-            data-i18n-en="Open Full Archive"
-            data-i18n-ar="افتح الأرشيف الكامل">Open Full Archive</span>
-      <span class="btn__arrow">→</span>
-    </a>
-    <span class="gallery__count">
-      <span>06</span> / <span>47</span>
-    </span>
-  </div>
-</section>
-
 <!-- ::: PATH — interactive chart ::: -->
-<section class="section section--path" id="timeline">
+<section class="section section--path" id="timeline" data-stage="5">
   <header class="section__head">
-    <span class="section__no">— 04</span>
+    <span class="section__no">STAGE 05 / 06</span>
     <h2 class="section__title"><span data-i18n-en="Path" data-i18n-ar="المسار">Path</span> <em>道</em></h2>
     <span class="section__line"></span>
   </header>
 
   <p class="section__lead reveal-up"
      data-i18n-en="A short map of how I picked up the craft. Pick a window — the chart redraws."
-     data-i18n-ar="خريطة قصيرة عن الطريق اللي مشيته. اختار فترة — الخط البياني يتغير.">
+     data-i18n-ar="خريطة قصيرة لرحلتي مع هذا المجال. اختر فترة — ويتغيّر المخطط.">
     A short map of how I picked up the craft. Pick a window — the chart redraws.
   </p>
 
   <div class="path reveal-up">
-    <div class="path__tabs" role="tablist">
-      <button class="path__tab is-active" data-year-idx="0" data-sfx="click" type="button">
+    <div class="path__tabs" role="tablist" aria-label="Timeline">
+      <button class="path__tab is-active" data-year-idx="0" data-sfx="click" type="button" role="tab" aria-selected="true" aria-controls="pathPanel">
         <span class="path__tab-year">2019 — 2022</span>
         <span class="path__tab-label" data-i18n-en="Phone era" data-i18n-ar="فترة الجوال">Phone era</span>
       </button>
-      <button class="path__tab" data-year-idx="1" data-sfx="click" type="button">
+      <button class="path__tab" data-year-idx="1" data-sfx="click" type="button" role="tab" aria-selected="false" aria-controls="pathPanel" tabindex="-1">
         <span class="path__tab-year">2022 — 2024</span>
-        <span class="path__tab-label" data-i18n-en="Getting fluent" data-i18n-ar="رويداً رويداً">Getting fluent</span>
+        <span class="path__tab-label" data-i18n-en="Getting fluent" data-i18n-ar="بدأت أتقن">Getting fluent</span>
       </button>
-      <button class="path__tab" data-year-idx="2" data-sfx="click" type="button">
+      <button class="path__tab" data-year-idx="2" data-sfx="click" type="button" role="tab" aria-selected="false" aria-controls="pathPanel" tabindex="-1">
         <span class="path__tab-year">2024 — 2026</span>
-        <span class="path__tab-label" data-i18n-en="PC + Adobe + Code" data-i18n-ar="PC و أدوبي و كود">PC + Adobe + Code</span>
+        <span class="path__tab-label" data-i18n-en="PC + Adobe + Code" data-i18n-ar="كمبيوتر وأدوبي وكود">PC + Adobe + Code</span>
       </button>
     </div>
 
-    <div class="path__body glass">
+    <div class="path__body glass" id="pathPanel" role="tabpanel">
       <div class="path__chart">
         <div class="path__chart-head">
           <span class="path__chart-axisY" data-i18n-en="KNOWLEDGE — Y" data-i18n-ar="المعرفة — Y">KNOWLEDGE — Y</span>
@@ -541,7 +704,6 @@
             </filter>
           </defs>
 
-          <!-- horizontal grid -->
           <g class="path__grid">
             <line x1="80" y1="320" x2="560" y2="320"/>
             <line x1="80" y1="250" x2="560" y2="250"/>
@@ -549,7 +711,6 @@
             <line x1="80" y1="110" x2="560" y2="110"/>
             <line x1="80" y1="40"  x2="560" y2="40"/>
           </g>
-          <!-- vertical grid at category positions -->
           <g class="path__grid path__grid--v">
             <line x1="100" y1="40" x2="100" y2="320"/>
             <line x1="210" y1="40" x2="210" y2="320"/>
@@ -558,7 +719,6 @@
             <line x1="540" y1="40" x2="540" y2="320"/>
           </g>
 
-          <!-- y-axis labels -->
           <g class="path__ylabels">
             <text x="70" y="324" text-anchor="end">0</text>
             <text x="70" y="254" text-anchor="end">25</text>
@@ -567,7 +727,6 @@
             <text x="70" y="44"  text-anchor="end">100</text>
           </g>
 
-          <!-- x-axis category labels (filled by JS to support i18n) -->
           <g class="path__xlabels">
             <text x="100" y="350" text-anchor="middle" class="path__xlabel" data-cat-idx="0">Design</text>
             <text x="210" y="350" text-anchor="middle" class="path__xlabel" data-cat-idx="1">Video</text>
@@ -576,14 +735,10 @@
             <text x="540" y="350" text-anchor="middle" class="path__xlabel" data-cat-idx="4">3D</text>
           </g>
 
-          <!-- area fill -->
           <polygon class="path__area" points="100,320 210,320 320,320 430,320 540,320 540,320 100,320" fill="url(#pathGrad)"/>
-          <!-- glow line -->
           <polyline class="path__glow" points="100,320 210,320 320,320 430,320 540,320" fill="none" filter="url(#pathBlur)"/>
-          <!-- main line -->
           <polyline class="path__line" points="100,320 210,320 320,320 430,320 540,320" fill="none"/>
 
-          <!-- data points -->
           <g class="path__points">
             <circle class="path__pt" data-i="0" cx="100" cy="320" r="6"/>
             <circle class="path__pt" data-i="1" cx="210" cy="320" r="6"/>
@@ -592,7 +747,6 @@
             <circle class="path__pt" data-i="4" cx="540" cy="320" r="6"/>
           </g>
 
-          <!-- numeric value above each point -->
           <g class="path__values">
             <text class="path__val" data-i="0" x="100" y="306" text-anchor="middle">0</text>
             <text class="path__val" data-i="1" x="210" y="306" text-anchor="middle">0</text>
@@ -614,9 +768,9 @@
 </section>
 
 <!-- ::: CONTACT ::: -->
-<section class="section section--contact" id="contact">
+<section class="section section--contact" id="contact" data-stage="6">
   <header class="section__head">
-    <span class="section__no">— 05</span>
+    <span class="section__no">STAGE 06 / 06</span>
     <h2 class="section__title"><span data-i18n-en="Contact" data-i18n-ar="تواصل">Contact</span> <em>連絡</em></h2>
     <span class="section__line"></span>
   </header>
@@ -624,14 +778,14 @@
   <div class="contact">
     <div class="contact__left reveal-up">
       <h3 class="contact__big">
-        <span data-i18n-en="Let's make"   data-i18n-ar="خلّينا نسوّي">Let's make</span>
-        <span class="accent" data-i18n-en="something" data-i18n-ar="شيء">something</span>
-        <span data-i18n-en="worth re-watching." data-i18n-ar="يستاهل المشاهدة مرتين.">worth re-watching.</span>
+        <span data-i18n-en="Let's make"   data-i18n-ar="لنصنع">Let's make</span>
+        <span class="accent" data-i18n-en="something" data-i18n-ar="شيئًا">something</span>
+        <span data-i18n-en="worth re-watching." data-i18n-ar="يستحق المشاهدة مرتين.">worth re-watching.</span>
       </h3>
       <p class="contact__lead"
-         data-i18n-en="Open for commissions, collaborations, and creative residencies. Reply usually within 24 hours — sometimes between frames."
-         data-i18n-ar="مفتوح للتكاليف والتعاونات والإقامات الإبداعية. الردّ عادةً خلال 24 ساعة — أحياناً بين إطارين.">
-        Open for commissions, collaborations, and creative residencies. Reply usually
+         data-i18n-en="Open for commissions, collaborations, and creative projects. Reply usually within 24 hours — sometimes between frames."
+         data-i18n-ar="متاح للطلبات الخاصة والتعاون والمشاريع الإبداعية. أرد عادةً خلال 24 ساعة — وأحيانًا بين إطارين.">
+        Open for commissions, collaborations, and creative projects. Reply usually
         within 24 hours — sometimes between frames.
       </p>
 
@@ -653,7 +807,7 @@
         </a>
         <a href="mailto:s12345.ss203@gmail.com" data-sfx="hover" aria-label="Email">
           <span class="soc__jp">@</span>
-          <span class="soc__name" data-i18n-en="Email" data-i18n-ar="إيميل">Email</span>
+          <span class="soc__name" data-i18n-en="Email" data-i18n-ar="البريد">Email</span>
           <span class="soc__handle">s12345.ss203</span>
         </a>
         <a href="https://www.google.com/maps?q=Al-Shu'la,Baghdad" target="_blank" rel="noopener" data-sfx="hover" aria-label="Location">
@@ -664,34 +818,58 @@
       </div>
     </div>
 
-    <aside class="contact__panel glass reveal-up" data-delay="0.2">
-      <div class="contact__panel-head">
-        <span class="dot"></span>
-        <span data-i18n-en="DIRECT · CHANNELS" data-i18n-ar="قنوات · مباشرة">DIRECT · CHANNELS</span>
-        <em>連絡</em>
+    <aside class="contact__right reveal-up" data-delay="0.2">
+      <div class="faq glass">
+        <div class="faq__head">
+          <span class="dot"></span>
+          <span data-i18n-en="Q &amp; A" data-i18n-ar="أسئلة وأجوبة">Q &amp; A</span>
+          <em>質問</em>
+        </div>
+        <details class="faq__item" open>
+          <summary>
+            <span data-i18n-en="What do you design?" data-i18n-ar="ماذا تصمم؟">What do you design?</span>
+            <i aria-hidden="true"></i>
+          </summary>
+          <p data-i18n-en="Social media campaigns, posters, roll-ups and print, plus video editing and motion."
+             data-i18n-ar="حملات سوشيال ميديا، بوسترات، رول أب ومطبوعات، إضافة إلى المونتاج والموشن.">
+            Social media campaigns, posters, roll-ups and print, plus video editing and motion.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>
+            <span data-i18n-en="Who have you worked with?" data-i18n-ar="مع من عملت؟">Who have you worked with?</span>
+            <i aria-hidden="true"></i>
+          </summary>
+          <p data-i18n-en="Beauty brands like Mytime and Clving, plus workshop posters for Elaka."
+             data-i18n-ar="علامات تجميل مثل Mytime و Clving، وبوسترات ورش لعلاكة.">
+            Beauty brands like Mytime and Clving, plus workshop posters for Elaka.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>
+            <span data-i18n-en="How do we start a project?" data-i18n-ar="كيف نبدأ مشروعًا؟">How do we start a project?</span>
+            <i aria-hidden="true"></i>
+          </summary>
+          <p data-i18n-en="Send me the idea and your deadline on Instagram or by email — I usually reply within 24 hours."
+             data-i18n-ar="أرسل لي الفكرة والموعد المطلوب على إنستغرام أو بالبريد — وعادةً أرد خلال 24 ساعة.">
+            Send me the idea and your deadline on Instagram or by email — I usually reply within 24 hours.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>
+            <span data-i18n-en="Are you open for freelance work?" data-i18n-ar="هل أنت متاح للعمل الحر؟">Are you open for freelance work?</span>
+            <i aria-hidden="true"></i>
+          </summary>
+          <p data-i18n-en="Yes — commissions and collaborations are open right now."
+             data-i18n-ar="نعم — الطلبات الخاصة والتعاون متاحة الآن.">
+            Yes — commissions and collaborations are open right now.
+          </p>
+        </details>
       </div>
-      <ul class="contact__panel-list">
-        <li>
-          <span data-i18n-en="Email" data-i18n-ar="إيميل">Email</span>
-          <strong dir="ltr">s12345.ss203@gmail.com</strong>
-        </li>
-        <li>
-          <span data-i18n-en="Phone" data-i18n-ar="هاتف">Phone</span>
-          <strong dir="ltr">+964 770 239 3508</strong>
-        </li>
-        <li>
-          <span data-i18n-en="Instagram" data-i18n-ar="إنستغرام">Instagram</span>
-          <strong dir="ltr">@mornm_</strong>
-        </li>
-        <li>
-          <span data-i18n-en="Location" data-i18n-ar="الموقع">Location</span>
-          <strong data-i18n-en="Baghdad · Shu'la" data-i18n-ar="بغداد · الشعلة">Baghdad · Shu'la</strong>
-        </li>
-      </ul>
-      <div class="contact__panel-kanji">紋</div>
     </aside>
   </div>
 </section>
+</main>
 
 <!-- ::: FOOTER ::: -->
 <footer class="footer">
@@ -704,29 +882,29 @@
     <div class="footer__meta">
       <span>© 2026 <span data-i18n-en="Murtadha Muayad Majid" data-i18n-ar="مرتضى مؤيد مجيد">Murtadha Muayad Majid</span></span>
       <span class="dotsep">·</span>
-      <span data-i18n-en="Designed in the dark, animated frame by frame."
-            data-i18n-ar="صُمّم في الظلام، حُرّك إطاراً بعد إطار.">Designed in the dark, animated frame by frame.</span>
+      <span data-i18n-en="Designed in the dark, built on φ."
+            data-i18n-ar="صُمّم في الظلام، وبُني على النسبة الذهبية.">Designed in the dark, built on φ.</span>
     </div>
     <div class="footer__top">
       <a href="#hero" data-sfx="click">
-        <span data-i18n-en="Back to top" data-i18n-ar="للأعلى">Back to top</span> <span>↑</span>
+        <span data-i18n-en="Back to top" data-i18n-ar="العودة للأعلى">Back to top</span> <span>↑</span>
       </a>
     </div>
   </div>
   <div class="footer__strip" aria-hidden="true">
-    <span>記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · 記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM ·</span>
-    <span>記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · 記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM ·</span>
+    <span>記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · φ 1.618 · 記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · φ 1.618 ·</span>
+    <span>記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · φ 1.618 · 記憶 · MEMORIA · 動画 · MOTION · 設計 · DESIGN · 符号 · CODE · 紋 · MORNM · φ 1.618 ·</span>
   </div>
 </footer>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
   <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
   <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous">‹</button>
   <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next">›</button>
   <figure class="lightbox__inner">
-    <img id="lightboxImg" src="" alt="" />
-    <figcaption id="lightboxCap"></figcaption>
+    <img id="lightboxImg" alt="" />
+    <figcaption id="lightboxCap" dir="ltr"></figcaption>
   </figure>
 </div>
 
@@ -736,6 +914,7 @@
   <div class="cursor__ring"></div>
 </div>
 
-<script src="script.js"></script>
+<script src="works-data.js?v=13"></script>
+<script src="script.js?v=13"></script>
 </body>
 </html>
