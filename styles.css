@@ -1908,14 +1908,23 @@ html[dir="rtl"] .ep-card:hover .ep-card-thumb{ transform: rotate(0.618deg) trans
   .nav.is-open .nav__burger span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
   .nav.is-open .nav__burger span:nth-child(2){ opacity: 0; }
   .nav.is-open .nav__burger span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+  /* The nav is transformed + blurred, which turns position:fixed children
+     into nav-relative boxes — so the panel hangs from the nav (absolute,
+     top:100%) with an explicit full-screen height instead. */
   .nav.is-open .nav__links{
-    display: flex; flex-direction: column; align-items: flex-start;
-    position: fixed; inset: var(--nav-h) 0 0 0;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+    position: absolute; top: 100%; left: 0; right: 0;
+    height: calc(100vh - var(--nav-h));
+    height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
     padding: var(--sp-6) var(--gutter);
-    background: rgba(10,10,10,0.97);
-    backdrop-filter: blur(21px);
+    background: #0A0A0A;
+    border-top: 1px solid var(--c-line);
     gap: var(--sp-5);
+    z-index: 5;
   }
+  .nav.is-open .progress{ display: none; }
+  body.menu-open{ overflow: hidden; }
   .nav.is-open .nav__links a{ font-size: var(--step-2); }
   .nav.is-open .nav__links a em{ display: inline; }
   .kanji-column{ display: none; }
@@ -1975,8 +1984,9 @@ html[dir="rtl"] .ep-card:hover .ep-card-thumb{ transform: rotate(0.618deg) trans
   .path__tab{ padding: var(--sp-3); flex: 1 1 0; }
   .path__tab-year{ font-size: var(--step-1); }
   .path__body{ padding: var(--sp-4); }
-  .path__xlabels text{ font-size: 14px; }
-  .path__ylabels text{ font-size: 12px; }
+  .path__xlabels text{ font-size: 19px; }
+  .path__ylabels text{ font-size: 17px; }
+  .path__val{ font-size: 17px; }
 
   .contact__big{ font-size: clamp(var(--step-4), 12vw, var(--step-6)); }
   .contact__big .accent{ margin-inline-start: var(--sp-4); }
@@ -2261,3 +2271,13 @@ html[lang="ar"] .marks__facts dd{ font-size: var(--step-0); line-height: 1.85; }
   .nav__music-text{ display: none; }
   .nav__music{ padding: var(--sp-2) var(--sp-3); }
 }
+
+/* email address must keep its real case */
+.btn--email .btn__label{ text-transform: none; letter-spacing: 0.04em; font-family: var(--ff-mono); font-weight: 500; }
+@media (max-width: 600px){ .btn--email .btn__label{ font-size: var(--step--1); } }
+
+/* music toggle: note icon always visible, bars only while playing */
+.nav__music-icon{ width: 14px; height: 14px; color: var(--c-accent); flex-shrink: 0; }
+.nav__music .nav__music-eq{ display: none; }
+.nav__music.is-on .nav__music-eq{ display: inline-flex; }
+.nav__music.is-on .nav__music-icon{ display: none; }

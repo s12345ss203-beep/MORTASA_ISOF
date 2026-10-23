@@ -526,6 +526,7 @@
   const setNavOpen = (open) => {
     navEl.classList.toggle('is-open', open);
     burger.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
   };
   burger.addEventListener('click', () => {
     setNavOpen(!navEl.classList.contains('is-open'));
